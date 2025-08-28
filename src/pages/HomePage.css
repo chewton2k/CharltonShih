@@ -1,0 +1,70 @@
+.home {
+  text-align: left;
+  padding: 3rem 8.3rem;
+}
+
+.home h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 100; 
+  font-style:inherit;
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #05565a,
+    #3aace4,
+    #3ed9ea,
+    #7cb9d7,
+    #0000ff,
+    #9a7ff3,
+    #8f00ff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 200;
+  font-size: 2.4rem; 
+  font-style: italic;
+}
+
+.home p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 200;
+  color: gray; 
+}
+
+
+/* Boxes container */
+.box-container {
+  display: flex;
+  gap: 7rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap; 
+}
+
+/* Each box item with description */
+.box-item {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+/* Gray boxes */
+.gray-box {
+  background-color: #ccc;
+  width: 620px;
+  height: 400px;
+  border-radius: 8px;
+}
+
+/* Box description text */
+.box-description {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 0.5rem;
+}

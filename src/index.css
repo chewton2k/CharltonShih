@@ -1,5 +1,4 @@
 :root {
-  /* Default / fallback font for general text */
   --font-body: 'DM Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-header: 'Instrument Serif', serif;
   --font-accent: 'Estedad-VF', sans-serif;
@@ -14,37 +13,22 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: black; 
 }
 
-body {
+html, body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding:0; 
+  width: 100%;
+  height: 100%;
   font-family: var(--font-body);
+  cursor: crosshair;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-header);
   line-height: 1.1;
-}
-
-h1 {
-  font-size: 3.2em;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-button {
-  font-family: var(--font-accent);
 }
 
 @media (prefers-color-scheme: light) {
