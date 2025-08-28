@@ -10,7 +10,6 @@ import ProjectsPage from './pages/ProjectsPage';
 function App() {
   return (
     <Router>
-      <div className="app-container">
         <Navbar />
         <div className="app-content">
           <Routes>
@@ -20,7 +19,6 @@ function App() {
         </Routes>
       </div>
       <Footer />
-      </div>
     </Router>
   );
 }
