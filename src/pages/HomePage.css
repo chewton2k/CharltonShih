@@ -67,4 +67,12 @@
   font-weight: 500;
   color: #333;
   margin-top: 0.5rem;
+  display: flex; 
 }
+
+.home h3{
+  font-size: 1.4rem;
+  font-weight: 70;
+  color: #3c3b3b;
+  margin-top: 0.5rem;
+}   
