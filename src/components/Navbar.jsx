@@ -8,6 +8,7 @@ const Navbar = () => {
         <a href="/">CHARLTON SHIH</a>
       </div>
       <div className="navbar-right">
+        <a href="Charlton_Shih_Resume.pdf" target="_blank" rel="noopener noreferrer">RESUME</a>
         <a href="/research">RESEARCH</a>
         <a href="/experience">EXPERIENCE</a>
         <a href="/projects">PROJECTS</a>

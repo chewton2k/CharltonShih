@@ -19,11 +19,11 @@ const HomePage = () => {
       <div className="box-container">
         <div className="box-item">
           <div className="gray-box"></div>
-          <h3 className="box-description">Pill Pall</h3>
+          <h3 className="box-description">PillPall</h3>
         </div>
         <div className="box-item">
           <div className="gray-box"></div>
-          <h3 className="box-description">Heart Beat</h3>
+          <h3 className="box-description">UCLA Design</h3>
         </div>
       </div>
     </section>
