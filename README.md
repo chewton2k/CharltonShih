@@ -1,4 +1,2 @@
-# ShawnNguyen
-
-Shawn Nguyen's portfolio :) 
+# Charlton Shih
 
