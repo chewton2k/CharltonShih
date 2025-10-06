@@ -141,4 +141,14 @@
   .home { padding: 2rem; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-media img { height: 240px; }
+
+  .home-btn {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+  }
 }

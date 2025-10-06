@@ -8,11 +8,22 @@
     user-select: none;
     cursor: pointer;
     transition: 300ms;
-    border-radius: 10px;
+    background: transparent; /* remove any default bg */
+    border: none;            /* remove default border */
+    padding: 0;              /* remove default padding */
+    appearance: none;
+    -webkit-appearance: none;
   }
   .burger input[type="checkbox"] {
     appearance: none;
     transition: 300ms;
+    background: transparent; /* hide checkbox bg */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;              /* make checkbox invisible but clickable */
+    cursor: pointer;
   }
   
   .burger::before,
@@ -20,6 +31,7 @@
     content: "";
     transition: 300ms;
     transform-origin: center center;
+    background: black;
   }
   
   .burger::before {
@@ -34,7 +46,6 @@
     width: 20px;
     height: 2.1px;
     display: block;
-    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     position: absolute;
   }
@@ -51,14 +62,13 @@
   }
   
   .burger:hover {
-    background: #000000;
     border-radius: 50%;
   }
   
   .burger:hover .line,
   .burger:hover::before,
   .burger:hover::after {
-    background: #e8e8e8;
+    background: black;
   }
   
   .burger:active {
