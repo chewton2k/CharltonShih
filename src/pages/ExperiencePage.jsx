@@ -64,7 +64,7 @@ const ExperiencePage = () => {
       <div className="experience-wrapper">
         {/* Header */}
         <div className="experience-header">
-          <h2 className="experience-title">experience</h2>
+          <h2 className="experience-title">experience.</h2>
         </div>
 
         {/* Stacked List */}
