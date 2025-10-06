@@ -37,6 +37,19 @@ const HomePage = () => {
         <Link to="/experience" className="home-btn">Experience → </Link>
         <Link to="/projects" className="home-btn">Projects → </Link>
       </div>
+
+      <div className="home-tribute">
+        <h3 className="tribute-title">a small tribute to where it started...</h3>
+        <a
+          className="tribute-link"
+          href="https://chewton2k.github.io/Portfolio/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View my old portfolio →
+        </a>
+      </div>
+
     </section>
   );
 };
