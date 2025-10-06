@@ -49,4 +49,31 @@
   width: 390px;
   height: 375px;
   border-radius: 8px;
+  box-shadow: 1px 5px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.gallery-title {
+  font-weight: 100; 
+  font-size: 2.4rem;
+  color: #3f3e3e;
+  text-align: left;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6rem;
+}
+
+.image-row img {
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
 }

@@ -1,5 +1,3 @@
-import { useState, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./ExperiencePage.css";
 
 const experiences = [
@@ -61,141 +59,42 @@ const experiences = [
 ];
 
 const ExperiencePage = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const cardWidth = 420;
-      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
-  const handleScroll = () => {
-    if (scrollRef.current) {
-      const cardWidth = 420;
-      const scrollLeft = scrollRef.current.scrollLeft;
-      const newIndex = Math.round(scrollLeft / cardWidth);
-      setActiveIndex(newIndex);
-    }
-  };
-
   return (
     <section className="experience-section">
       <div className="experience-wrapper">
         {/* Header */}
         <div className="experience-header">
-          <h2 className="experience-title">experience.</h2>
-          <p className="experience-subtitle">Scroll through my professional journey</p>
+          <h2 className="experience-title">experience</h2>
         </div>
 
-        {/* Navigation Dots */}
-        <div className="nav-dots">
-          {experiences.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                if (scrollRef.current) {
-                  scrollRef.current.scrollTo({
-                    left: index * 420,
-                    behavior: 'smooth'
-                  });
-                }
-              }}
-              className={`nav-dot ${activeIndex === index ? 'active' : ''}`}
-              aria-label={`Go to experience ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Carousel Container */}
-        <div className="carousel-container">
-          {/* Navigation Buttons */}
-          <button
-            onClick={() => scroll('left')}
-            className="nav-button nav-button-left"
-            disabled={activeIndex === 0}
-            aria-label="Previous experience"
-          >
-            <ChevronLeft className="nav-icon" />
-          </button>
-
-          <button
-            onClick={() => scroll('right')}
-            className="nav-button nav-button-right"
-            disabled={activeIndex === experiences.length - 1}
-            aria-label="Next experience"
-          >
-            <ChevronRight className="nav-icon" />
-          </button>
-
-          {/* Scrollable Cards */}
-          <div
-            ref={scrollRef}
-            onScroll={handleScroll}
-            className="carousel-scroll"
-          >
-            {experiences.map((exp, index) => (
-              <div key={index} className="experience-card-wrapper">
-                <div className="experience-card">
-                  {/* Color Bar */}
-                  <div className="color-bar" />
-                  
-                  {/* Card Content */}
-                  <div className="card-content">
-                    {/* Header */}
-                    <div className="card-header">
-                      <div className="role-container">
-                        <span className="role-badge">{exp.role}</span>
-                      </div>
-                      
-                      <h3 className="organization">{exp.organization}</h3>
-                      
-                      <div className="date-info">
-                        <p className="date">{exp.date}</p>
-                        <p className="location">📍 {exp.location}</p>
-                      </div>
-                    </div>
-
-                    {/* Details */}
-                    <div className="card-details">
-                      <ul className="details-list">
-                        {exp.details.map((detail, i) => (
-                          <li key={i} className="detail-item">
-                            <span className="bullet-point" />
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Footer Badge */}
-                    <div className="card-footer">
-                      <span className="card-counter">
-                        {index + 1} / {experiences.length}
-                      </span>
-                      <div className="view-details-badge">
-                        View Details →
-                      </div>
-                    </div>
+        {/* Stacked List */}
+        <div className="experience-list">
+          {experiences.map((exp, index) => (
+            <article key={index} className="experience-card">
+              <div className="card-content">
+                <header className="card-header">
+                  <div className="role-container">
+                    <span className="role-badge">{exp.role}</span>
                   </div>
+                  <h3 className="organization">{exp.organization}</h3>
+                  <div className="date-info">
+                    <p className="date">{exp.date}</p>
+                    <p className="location">📍 {exp.location}</p>
+                  </div>
+                </header>
+                <div className="card-details">
+                  <ul className="details-list">
+                    {exp.details.map((detail, i) => (
+                      <li key={i} className="detail-item">
+                        <span className="bullet-point" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="progress-container">
-          <div className="progress-bar">
-            <div 
-              className="progress-fill"
-              style={{ 
-                width: `${((activeIndex + 1) / experiences.length) * 100}%` 
-              }}
-            />
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

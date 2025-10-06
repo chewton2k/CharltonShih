@@ -5,9 +5,9 @@ const HomePage = () => {
     <section id="home" className="home">
       <div>
         <h1>
-          I'm Charlton{' '}
-          <span className="rainbow-text">innovation</span> and{' '}
-          <span className="rainbow-text">creativity</span>
+          I'm Charlton, I explore the ideas of{' '}
+          <span className="rainbow-text">AI/ML</span> and{' '}
+          <span className="rainbow-text">Software</span>
         </h1>
       </div>
       <div>

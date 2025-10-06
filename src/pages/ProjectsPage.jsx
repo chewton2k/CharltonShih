@@ -1,56 +1,103 @@
+import React from "react";
 import "./ProjectsPage.css";
 
-const Projects = () => {
-return (
-    <section className="projects-section">
-      <h2 className="projects-title">projects</h2>
+const ProjectsPage = () => {
+  return (
+    <section id="projects" className="projects-section">
+      <h2 className="projects-title">projects.</h2>
       <div className="projects-grid">
-        {/* Project 1 */}
+        {/* Project 1 - UCLA Design */}
         <div className="project-card">
-          <h3 className="project-title">lotto group</h3>
+          <h3 className="project-title">UCLA Design</h3>
           <p className="project-description">
-            iOS app for pooling tickets, scanning lotto numbers, and managing
-            group entries in real time.
+            Developed a real-time, state-managed drag-and-drop UI for furniture placement using React's component-based
+            architecture and optimized event-driven rendering for seamless interactivity. Designed and optimized a NoSQL document database in MongoDB, indexing user-generated layouts and
+            integrating queryable search functionality.
           </p>
           <p className="project-tech">
-            swift · swiftui · firebase · vision · git/github
+            React.js · MongoDB · Node.js · Express · JS · TailwindCSS
           </p>
+          <a href="https://github.com/chewton2k/UCLADesign" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
+
+        <div className="project-card">
+          <h3 className="project-title">PillPall</h3>
+          <p className="project-description">
+            Collaborated with a 16-person team of mechanical, electrical, and UI/UX engineers to build Pill Pall, an automated pill
+            dispenser that tracks usage and notifies users of scheduled doses. Developed a full-stack IoT system connecting ESP32 microcontrollers, servo motors, and IR sensors with a web platform
+            to enable real-time dispensing and confirmation tracking. Integrated Google Calendar API, OAuth 2.0, and Google Cloud IAM to manage medication schedules with secure reminders
+            and event creation.
+          </p>
+          <p className="project-tech">
+            Typescript · React.js · MongoDB · Arduino · WebSocket
+          </p>
+          <a href="/projects/pillpall" className="project-link">View More Screens →</a>
           <div className="project-images">
-            <img src="/images/lotto-1.png" alt="Lotto Group screenshot 1" />
-            <img src="/images/lotto-2.png" alt="Lotto Group screenshot 2" />
           </div>
         </div>
 
-        {/* Project 2 */}
+        {/* Project 2 - Club Scraper */}
         <div className="project-card">
-          <h3 className="project-title">stock market prediction</h3>
+          <h3 className="project-title">Club Scraper</h3>
           <p className="project-description">
-            machine learning pipeline to forecast stock trends using regression
-            models and engineered features.
+            Python web scraper for gathering information on tech clubs at UCLA from their official student association page. Uses Selenium to automate browser actions and extract relevant data such as club names, emails, Instagram handles, and signatories.
           </p>
           <p className="project-tech">
-            python · pandas · numpy · scikit-learn · jupyter
+            python · jupyterlab · selenium
           </p>
+          <a href="https://github.com/chewton2k/ClubScraper" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
         </div>
 
-        {/* Project 3 */}
+        {/* Project 3 - Stock Market Prediction */}
         <div className="project-card">
-          <h3 className="project-title">ucla room design</h3>
+          <h3 className="project-title">Stock Market Prediction Using Machine Learning and Data Analysis</h3>
           <p className="project-description">
-            interactive web app for designing and reviewing dorm layouts with
-            drag & drop furniture and searchable database.
+            Built data frames and visualizations with Pandas, NumPy, and Jupyter to compare predictions with targets across
+            10000 data points. Trained an ML model (scikit-learn) with 50% precision; optimized with backtesting (10 years of data) and new
+            predictors, boosting accuracy to 58.8%.
           </p>
           <p className="project-tech">
-            mongodb · express · react (vite) · node.js
+            python · jupyterlab · Scikit-learn · Pandas · NumPy · matplotlib
           </p>
-          <div className="project-images">
-            <img src="/images/room-1.png" alt="UCLA Room Design screenshot 1" />
-            <img src="/images/room-2.png" alt="UCLA Room Design screenshot 2" />
-          </div>
+          <a href="https://github.com/chewton2k/PredictingStocks" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
+
+        {/* Project 4 - Lotto Group */}
+        <div className="project-card">
+          <h3 className="project-title">Lotto Group</h3>
+          <p className="project-description">
+            Enabled users to create groups and pool money for lottery ticket purchases, streamlining the process for workplaces and other communities. Developed using SwiftUI, implementing API calls to display California lottery drawings and jackpots. Leveraged Vision library to accurately scan and parse drawing numbers from tickets.
+          </p>
+          <p className="project-tech">
+            swift · Foundation · Swiftdata · Firebase · vision
+          </p>
+          <a href="https://github.com/chewton2k/Office-Group" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
+
+        {/* Project 6 - RiseAndWise */}
+        <div className="project-card">
+          <h3 className="project-title">RiseAndWise</h3>
+          <p className="project-description">
+            Built a smart alarm app in React Native that integrates with OpenAI's API to generate dynamic multiple-choice questions tied to a user's courses. Designed a reinforcement-based wake-up system requiring correct answers to deactivate alarms, combining academic review with daily routines. Implemented Supabase backend and Node.js API for course input, question storage, and scalable real-time question generation.
+          </p>
+          <p className="project-tech">
+            React Native · Node · Supabase · ExpoGo
+          </p>
+          <a href="https://github.com/chewton2k/Rise-Wise" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
         </div>
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default ProjectsPage;

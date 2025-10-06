@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ResearchPage from './pages/ResearchPage';
 import ExperiencePage from './pages/ExperiencePage';
+import PillPallPage from './pages/PillPallPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/experience" element={<ExperiencePage />} />
             <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/pillpall" element={<PillPallPage />} />
         </Routes>
       </div>
       <Footer />

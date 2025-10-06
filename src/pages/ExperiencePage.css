@@ -1,7 +1,7 @@
 /* Main Section */
 .experience-section {
   min-height: 100vh;
-  padding: 4rem 1.5rem;
+  padding: 3rem 10rem;
 }
 
 .experience-wrapper {
@@ -12,6 +12,10 @@
 /* Header */
 .experience-header {
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .experience-title {
@@ -19,121 +23,23 @@
   line-height: 1.2;
   margin-bottom: 1rem;
   font-weight: 100;
-  color: #1e293b;
+  color: #3f3e3e;
   align-self: flex-start;
-  text-transform: lowercase;
 }
 
 .experience-subtitle {
-  color: #64748b;
-  font-size: 1.125rem;
+  /* Match AboutPage paragraph styling */
+  color: gray;
+  font-size: 1rem;
   font-weight: 300;
+  line-height: 1.6;
 }
 
-/* Navigation Dots */
-.nav-dots {
+/* Static List */
+.experience-list {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.nav-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 9999px;
-  background-color: #cbd5e1;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.nav-dot:hover {
-  background-color: #94a3b8;
-}
-
-.nav-dot.active {
-  width: 2rem;
-  background-color: #334155;
-}
-
-/* Carousel Container */
-.carousel-container {
-  position: relative;
-  padding: 0 3rem;
-}
-
-/* Navigation Buttons */
-.nav-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background-color: white;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 9999px;
-  padding: 0.75rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.nav-button:hover {
-  background-color: #f8fafc;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.nav-button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.nav-button:disabled:hover {
-  transform: translateY(-50%) scale(1);
-}
-
-.nav-button-left {
-  left: 0;
-}
-
-.nav-button-right {
-  right: 0;
-}
-
-.nav-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #334155;
-  display: block;
-}
-
-/* Scrollable Cards */
-.carousel-scroll {
-  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0 3rem;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.carousel-scroll:active {
-  cursor: grabbing;
-}
-
-.carousel-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-/* Card Wrapper */
-.experience-card-wrapper {
-  flex-shrink: 0;
-  width: 384px;
-  scroll-snap-align: center;
 }
 
 /* Experience Card */
@@ -141,7 +47,8 @@
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -151,14 +58,6 @@
 .experience-card:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   transform: translateY(-0.5rem);
-}
-
-/* Color Bar */
-.color-bar {
-  height: 0.5rem;
-  width: 100%;
-  background-color: #800020;
-  transition: height 0.3s ease;
 }
 
 .experience-card:hover .color-bar {
@@ -214,7 +113,8 @@
 .organization {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #1e293b;
+  /* Match AboutPage .highlight emphasis color */
+  color: #000;
   margin: 0.5rem 0;
   line-height: 1.4;
 }
@@ -224,24 +124,24 @@
 }
 
 .date {
-  font-size: 0.875rem;
-  color: #475569;
-  font-weight: 500;
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 300;
   margin: 0.25rem 0;
 }
 
 .location {
-  font-size: 0.75rem;
-  color: #64748b;
+  font-size: 0.9rem;
+  color: gray;
   margin: 0.25rem 0;
 }
 
 /* Details */
 .card-details {
   flex-grow: 1;
-  overflow-y: auto;
-  max-height: 280px;
-  padding-right: 0.5rem;
+  overflow: visible;
+  max-height: none;
+  padding-right: 0;
 }
 
 .card-details::-webkit-scrollbar {
@@ -270,8 +170,9 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  font-size: 0.875rem;
-  color: #475569;
+  /* Use AboutPage paragraph scale and weight */
+  font-size: 1rem;
+  color: gray;
   line-height: 1.6;
   margin-bottom: 0.75rem;
 }
@@ -285,68 +186,16 @@
   margin-top: 0.5rem;
 }
 
-/* Footer */
-.card-footer {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #f1f5f9;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* Footer removed for static list */
 
-.card-counter {
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: #cbd5e1;
-}
-
-.view-details-badge {
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  background-color: rgba(128, 0, 32, 0.1);
-  color: #800020;
-}
-
-/* Progress Bar */
-.progress-container {
-  margin-top: 2rem;
-  max-width: 768px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.progress-bar {
-  height: 0.25rem;
-  background-color: #e2e8f0;
-  border-radius: 9999px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: #334155;
-  transition: width 0.3s ease;
-  border-radius: 9999px;
-}
+/* Progress bar removed */
 
 /* Responsive */
 @media (max-width: 768px) {
+  .experience-section {
+    padding: 2rem 2rem;
+  }
   .experience-title {
     font-size: 2rem;
-  }
-
-  .carousel-container {
-    padding: 0 2rem;
-  }
-
-  .carousel-scroll {
-    padding: 0 2rem;
-  }
-
-  .experience-card-wrapper {
-    width: 320px;
   }
 }
