@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import ResearchPage from './pages/ResearchPage';
 import ExperiencePage from './pages/ExperiencePage';
 import PillPallPage from './pages/PillPallPage';
+import UCLADesignPage from './pages/UCLADesignPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/pillpall" element={<PillPallPage />} />
+          <Route path="/projects/ucla-design" element={<UCLADesignPage />} />
         </Routes>
       </div>
       <Footer />

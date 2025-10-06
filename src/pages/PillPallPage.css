@@ -46,6 +46,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   width: 100%;
+  border-radius: 8px;
 }
 
 .pillpall-gallery img {

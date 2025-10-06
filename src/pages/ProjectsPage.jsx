@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProjectsPage.css";
+import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
   return (
@@ -17,6 +18,7 @@ const ProjectsPage = () => {
           <p className="project-tech">
             React.js · MongoDB · Node.js · Express · JS · TailwindCSS
           </p>
+          <a href="#/projects/ucla-design" className="project-link">View More Screens →</a>
           <a href="https://github.com/chewton2k/UCLADesign" target="_blank" rel="noopener noreferrer" className="project-link">
             View Project →
           </a>
@@ -33,9 +35,7 @@ const ProjectsPage = () => {
           <p className="project-tech">
             Typescript · React.js · MongoDB · Arduino · WebSocket
           </p>
-          <a href="/projects/pillpall" className="project-link">View More Screens →</a>
-          <div className="project-images">
-          </div>
+          <Link to="/projects/pillpall" className="project-link">View More Screens →</Link>
         </div>
 
         {/* Project 2 - Club Scraper */}
@@ -89,13 +89,26 @@ const ProjectsPage = () => {
             Built a smart alarm app in React Native that integrates with OpenAI's API to generate dynamic multiple-choice questions tied to a user's courses. Designed a reinforcement-based wake-up system requiring correct answers to deactivate alarms, combining academic review with daily routines. Implemented Supabase backend and Node.js API for course input, question storage, and scalable real-time question generation.
           </p>
           <p className="project-tech">
-            React Native · Node · Supabase · ExpoGo
+            Typescript · React Native · Node · Supabase · ExpoGo
           </p>
           <a href="https://github.com/chewton2k/Rise-Wise" target="_blank" rel="noopener noreferrer" className="project-link">
             View Project →
           </a>
         </div>
       </div>
+
+      <div className="project-card">
+          <h3 className="project-title">Blockchain</h3>
+          <p className="project-description">
+            In progress...
+          </p>
+          <p className="project-tech">
+            Python · Flask · Requests · Postman 
+          </p>
+          <a href="https://github.com/chewton2k/blockchain" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
     </section>
   );
 };

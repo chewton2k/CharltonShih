@@ -23,6 +23,9 @@ const PillPallPage = () => {
       <div className="pillpall-gallery">
         <img src="/CharltonShih/pillpall.png" alt="PillPall screen 1" onClick={() => openLightbox("/CharltonShih/pillpall.png")} />
         <img src="/CharltonShih/pillpall2.png" alt="PillPall screen 2" onClick={() => openLightbox("/CharltonShih/pillpall2.png")} />
+        <img src="/CharltonShih/pillpall3.png" alt="PillPall screen 3" onClick={() => openLightbox("/CharltonShih/pillpall3.png")} />
+        <img src="/CharltonShih/pillpall4.png" alt="PillPall screen 4" onClick={() => openLightbox("/CharltonShih/pillpall4.png")} />
+        <img src="/CharltonShih/pillpall5.png" alt="PillPall screen 5" onClick={() => openLightbox("/CharltonShih/pillpall5.png")} />
       </div>
 
       {lightboxSrc && (
