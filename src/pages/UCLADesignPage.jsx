@@ -4,7 +4,7 @@ const UCLADesignPage = () => {
   return (
     <section className="ucla-section">
       <div className="ucla-header">
-        <h2 className="ucla-title">ucla design</h2>
+        <h2 className="ucla-title">ucla design.</h2>
         <p className="ucla-subtitle">screenshots, flows, and implementation details</p>
       </div>
 

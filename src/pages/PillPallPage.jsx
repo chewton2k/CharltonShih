@@ -9,23 +9,23 @@ const PillPallPage = () => {
   return (
     <section className="pillpall-section">
       <div className="pillpall-header">
-        <h2 className="pillpall-title">pillpall</h2>
+        <h2 className="pillpall-title">pillpal.</h2>
         <p className="pillpall-subtitle">screens, flows, and recent updates</p>
       </div>
 
       <div className="pillpall-description">
         <p>
-          PillPall is a mobile app focused on simplifying medication tracking and
+          PillPal is a mobile app focused on simplifying medication tracking and
           reminders with a friendly, accessible experience.
         </p>
       </div>
 
       <div className="pillpall-gallery">
-        <img src="/CharltonShih/pillpall.png" alt="PillPall screen 1" onClick={() => openLightbox("/CharltonShih/pillpall.png")} />
-        <img src="/CharltonShih/pillpall2.png" alt="PillPall screen 2" onClick={() => openLightbox("/CharltonShih/pillpall2.png")} />
-        <img src="/CharltonShih/pillpall3.png" alt="PillPall screen 3" onClick={() => openLightbox("/CharltonShih/pillpall3.png")} />
-        <img src="/CharltonShih/pillpall4.png" alt="PillPall screen 4" onClick={() => openLightbox("/CharltonShih/pillpall4.png")} />
-        <img src="/CharltonShih/pillpall5.png" alt="PillPall screen 5" onClick={() => openLightbox("/CharltonShih/pillpall5.png")} />
+        <img src="/CharltonShih/pillpall.png" alt="PillPal screen 1" onClick={() => openLightbox("/CharltonShih/pillpall.png")} />
+        <img src="/CharltonShih/pillpall2.png" alt="PillPal screen 2" onClick={() => openLightbox("/CharltonShih/pillpall2.png")} />
+        <img src="/CharltonShih/pillpall3.png" alt="PillPal screen 3" onClick={() => openLightbox("/CharltonShih/pillpall3.png")} />
+        <img src="/CharltonShih/pillpall4.png" alt="PillPal screen 4" onClick={() => openLightbox("/CharltonShih/pillpall4.png")} />
+        <img src="/CharltonShih/pillpall5.png" alt="PillPal screen 5" onClick={() => openLightbox("/CharltonShih/pillpall5.png")} />
       </div>
 
       {lightboxSrc && (

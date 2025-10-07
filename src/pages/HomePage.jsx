@@ -19,7 +19,7 @@ const HomePage = () => {
             <img src="/CharltonShih/pillpall.png" alt="PillPall preview" />
           </div>
           <div className="feature-overlay">
-            <span className="feature-title">PillPall</span>
+            <span className="feature-title">PillPal</span>
           </div>
         </Link>
         <Link to="/projects/ucla-design" className="feature-card" aria-label="View UCLA Design">

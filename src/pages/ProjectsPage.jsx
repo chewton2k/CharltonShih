@@ -25,9 +25,9 @@ const ProjectsPage = () => {
         </div>
 
         <div className="project-card">
-          <h3 className="project-title">PillPall</h3>
+          <h3 className="project-title">PillPal</h3>
           <p className="project-description">
-            Collaborated with a 16-person team of mechanical, electrical, and UI/UX engineers to build Pill Pall, an automated pill
+            Collaborated with a 16-person team of mechanical, electrical, and UI/UX engineers to build Pill Pal, an automated pill
             dispenser that tracks usage and notifies users of scheduled doses. Developed a full-stack IoT system connecting ESP32 microcontrollers, servo motors, and IR sensors with a web platform
             to enable real-time dispensing and confirmation tracking. Integrated Google Calendar API, OAuth 2.0, and Google Cloud IAM to manage medication schedules with secure reminders
             and event creation.

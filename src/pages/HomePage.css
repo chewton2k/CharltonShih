@@ -112,7 +112,6 @@
 .home-tribute {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #eaeaea;
 }
 
 .tribute-title {
@@ -134,7 +133,6 @@
 
 .tribute-link:hover {
   color: #000;
-  border-color: #000;
 }
 
 @media (max-width: 900px) {
@@ -150,5 +148,14 @@
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     font-size: 1rem;
+  }
+  .home-btn {
+    padding: 0.25rem 1rem;
+    border-radius: 8px;
+    color: black;
+    font-weight: 450;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.7rem;
   }
 }
