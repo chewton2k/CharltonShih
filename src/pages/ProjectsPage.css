@@ -36,6 +36,8 @@
   }
 }
 
+
+
 .project-card {
   border: 1.5px solid #3f3e3e; /* border outline like About page accent */
   border-radius: 8px;
@@ -45,8 +47,9 @@
   gap: 1rem;
   min-height: 220px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
+  background-color: #ebedf0;
 }
+
 
 .project-card:hover {
   transform: translateY(-5px);

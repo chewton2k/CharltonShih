@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProjectsPage.css";
 import { Link } from "react-router-dom";
+import LiquidEther from "../components/Background";
 
 const ProjectsPage = () => {
   return (
@@ -8,6 +9,7 @@ const ProjectsPage = () => {
       <h2 className="projects-title">projects.</h2>
       <div className="projects-grid">
         {/* Project 1 - UCLA Design */}
+        
         <div className="project-card">
           <h3 className="project-title">UCLA Design</h3>
           <p className="project-description">
