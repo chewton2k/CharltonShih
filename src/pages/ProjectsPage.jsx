@@ -40,6 +40,22 @@ const ProjectsPage = () => {
           <Link to="/projects/pillpall" className="project-link">View More Screens →</Link>
         </div>
 
+        <div className="project-card">
+          <h3 className="project-title">CrowdPlan</h3>
+          <p className="project-description">
+            Architected a full-stack event coordination platform using Next.js, React, Node.js, Express, Prisma, and PostgreSQL,
+            containerized with Docker and Docker Compose for reproducible, scalable development and deployment
+            Integrated API routing, database migrations, authentication, and environment configuration, maintaining scalability and
+            reproducibility across local and cloud environments
+          </p>
+          <p className="project-tech">
+            Typescript · Next.js · PostgreSQL · Docker · Prisma · Git/Github
+          </p>
+          <a href="https://github.com/chewton2k/CrowdPlan" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project (unavailable) →
+          </a>
+        </div>
+
         {/* Project 2 - Club Scraper */}
         <div className="project-card">
           <h3 className="project-title">Club Scraper</h3>
@@ -97,12 +113,13 @@ const ProjectsPage = () => {
             View Project →
           </a>
         </div>
-      </div>
 
-      <div className="project-card">
+              <div className="project-card">
           <h3 className="project-title">Blockchain</h3>
           <p className="project-description">
-            In progress...
+            Built a simplified blockchain in Python + Flask, implementing block structures with cryptographic hashing, proof-of-work
+            mining, transaction validation, and APIs for peer-to-peer communication.
+            Demonstrated chain integrity and consensus by resolving forks, validating blocks, synchronizing nodes, and crypto security
           </p>
           <p className="project-tech">
             Python · Flask · Requests · Postman 
@@ -111,6 +128,7 @@ const ProjectsPage = () => {
             View Project →
           </a>
         </div>
+      </div>
     </section>
   );
 };

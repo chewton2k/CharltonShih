@@ -2,9 +2,18 @@ import "./ExperiencePage.css";
 
 const experiences = [
   {
-    role: "Undergraduate Researcher",
+    role: "Software Engineer",
+    organization: "Clubhouse @ UCLA",
+    date: "September 2025 - Present",
+    location: "Los Angeles, California",
+    details: [
+      "Coming soon..."
+    ]
+  },
+  {
+    role: "Machine Learning Researcher",
     organization: "Physical Sciences and Mathematics Lab",
-    date: "Dec 2025 - Present",
+    date: "December 2025 - Present",
     location: "Los Angeles, California",
     details: [
       "Collaborated with a three-person team to design and develop multiplayer DCM cascading bandits under reinforcement learning frameworks, targeting sublinear regret under unique action and reward information asymmetry settings",
@@ -13,9 +22,9 @@ const experiences = [
     ]
   },
   {
-    role: "Full Stack Developer",
+    role: "Software Engineer",
     organization: "AdOptimal",
-    date: "Dec 2025 - Aug 2025",
+    date: "December 2025 - August 2025",
     location: "Los Angeles, California",
     details: [
       "Ad-Optimal connects businesses with student organizations, simplifying processes for advertisements and transactions",
@@ -25,9 +34,9 @@ const experiences = [
     ]
   },
   {
-    role: "Undergraduate Researcher",
+    role: "Autonomous Robotics Researcher",
     organization: "UCLA Computer Science Department",
-    date: "Jul 2024 - Jul 2025",
+    date: "July 2024 - July 2025",
     location: "Los Angeles, California",
     details: [
       "Collaborated with a 10-person team to develop affordable autonomous surgery robots under Prof. Arisaka and Yunbo Wang",
@@ -39,7 +48,7 @@ const experiences = [
   {
     role: "Learning Assistant (CS 35L)",
     organization: "UCLA Henry Samueli School of Engineering and Applied Science",
-    date: "Mar 2025 - Jun 2025",
+    date: "March 2025 - June 2025",
     location: "Los Angeles, California",
     details: [
       "Led 20–30 student discussion sessions on software construction, covering Emacs, networks, network security, scripting, operating systems, and software testing techniques",
@@ -49,7 +58,7 @@ const experiences = [
   {
     role: "Learning Assistant (Math 32B)",
     organization: "UCLA Henry Samueli School of Engineering and Applied Science",
-    date: "Jan 2024 - Jul 2024",
+    date: "January 2024 - July 2024",
     location: "Los Angeles, California",
     details: [
       "Led discussion sessions of 20-30 students on course topics for multivariable calculus",
@@ -102,3 +111,16 @@ const ExperiencePage = () => {
 };
 
 export default ExperiencePage;
+
+/* 
+
+    {
+    role: "Computational and AI Epigenetics Research Assistant",
+    organization: "Pellegrini Lab and The Roychowdhury Group Lab",
+    date: "September 2025 - Present",
+    location: "Los Angeles, California",
+    details: [
+      "Coming soon..."
+    ]
+  },
+*/ 
