@@ -1,10 +1,19 @@
 import "./ExperiencePage.css";
 
 const experiences = [
+    {
+    role: "Computational and AI Epigenetics Research Assistant",
+    organization: "Pellegrini Lab and The Roychowdhury Group Lab",
+    date: "September 2025 - Present",
+    location: "Los Angeles, California",
+    details: [
+      "Coming soon..."
+    ]
+  },
   {
     role: "Software Engineer",
     organization: "Clubhouse @ UCLA",
-    date: "September 2025 - Present",
+    date: "March 2025 - Present",
     location: "Los Angeles, California",
     details: [
       "Coming soon..."
