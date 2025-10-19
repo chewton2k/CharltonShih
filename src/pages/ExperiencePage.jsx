@@ -4,6 +4,7 @@ const experiences = [
     {
     role: "Computational and AI Epigenetics Research Assistant",
     organization: "Pellegrini Lab and The Roychowdhury Group Lab",
+    link: "https://www.vwaniroychowdhury.com/complexnetworks",
     date: "September 2025 - Present",
     location: "Los Angeles, California",
     details: [
@@ -13,15 +14,18 @@ const experiences = [
   {
     role: "Software Engineer",
     organization: "Clubhouse @ UCLA",
+    link: "https://www.clubhouseucla.com/",
     date: "March 2025 - Present",
     location: "Los Angeles, California",
     details: [
-      "Coming soon..."
+      "Developed a full-stack React, Next.js, Supabase, TailwindCSS, and Vercel, serving 200+ users since launch",
+      "Built and optimized database schemas and API integrations to handle over 1,000+ club entries across 40+ categories",
+      "Worked alongside a 14-person cross-functional team to translate Hi-Fis into functional UI features using TailwindCSS"
     ]
   },
   {
     role: "Machine Learning Researcher",
-    organization: "Physical Sciences and Mathematics Lab",
+    organization: "BruinML Lab",
     date: "December 2025 - Present",
     location: "Los Angeles, California",
     details: [
@@ -44,7 +48,7 @@ const experiences = [
   },
   {
     role: "Autonomous Robotics Researcher",
-    organization: "UCLA Computer Science Department",
+    organization: "Arisaka Elegant Mind Lab",
     date: "July 2024 - July 2025",
     location: "Los Angeles, California",
     details: [
@@ -57,6 +61,7 @@ const experiences = [
   {
     role: "Learning Assistant (CS 35L)",
     organization: "UCLA Henry Samueli School of Engineering and Applied Science",
+    link: "https://web.cs.ucla.edu/classes/spring1f/cs35L/", 
     date: "March 2025 - June 2025",
     location: "Los Angeles, California",
     details: [
@@ -67,6 +72,7 @@ const experiences = [
   {
     role: "Learning Assistant (Math 32B)",
     organization: "UCLA Henry Samueli School of Engineering and Applied Science",
+    link: "https://catalog.registrar.ucla.edu/course/2022/math32b?siteYear=2022", 
     date: "January 2024 - July 2024",
     location: "Los Angeles, California",
     details: [
@@ -94,7 +100,20 @@ const ExperiencePage = () => {
                   <div className="role-container">
                     <span className="role-badge">{exp.role}</span>
                   </div>
-                  <h3 className="organization">{exp.organization}</h3>
+                  <h3 className="organization">
+                    {exp.link ? (
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="organization-link"
+                      >
+                        {exp.organization} <span className="link-icon">🔗</span>
+                      </a>
+                    ) : (
+                      exp.organization
+                    )}
+                  </h3>
                   <div className="date-info">
                     <p className="date">{exp.date}</p>
                     <p className="location">📍 {exp.location}</p>
@@ -120,16 +139,3 @@ const ExperiencePage = () => {
 };
 
 export default ExperiencePage;
-
-/* 
-
-    {
-    role: "Computational and AI Epigenetics Research Assistant",
-    organization: "Pellegrini Lab and The Roychowdhury Group Lab",
-    date: "September 2025 - Present",
-    location: "Los Angeles, California",
-    details: [
-      "Coming soon..."
-    ]
-  },
-*/ 

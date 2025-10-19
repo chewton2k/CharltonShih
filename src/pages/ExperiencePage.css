@@ -186,9 +186,21 @@
   margin-top: 0.5rem;
 }
 
-/* Footer removed for static list */
+.organization-link {
+  color: #3f3e3e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-/* Progress bar removed */
+.organization-link:hover {
+  color: #b0c6de;
+  text-decoration: underline;
+}
+
+.link-icon {
+  font-size: 0.6em;
+  vertical-align: middle;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
