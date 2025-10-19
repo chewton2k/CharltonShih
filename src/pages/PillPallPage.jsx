@@ -15,7 +15,7 @@ const PillPallPage = () => {
 
       <div className="pillpall-description">
         <p>
-          PillPal is a mobile app focused on simplifying medication tracking and
+          PillPal is a web app focused on simplifying medication tracking and
           reminders with a friendly, accessible experience.
         </p>
       </div>
