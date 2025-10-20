@@ -26,7 +26,7 @@ const experiences = [
   {
     role: "Machine Learning Researcher",
     organization: "BruinML Lab",
-    date: "December 2025 - Present",
+    date: "December 2025 - October 2025",
     location: "Los Angeles, California",
     details: [
       "Collaborated with a three-person team to design and develop multiplayer DCM cascading bandits under reinforcement learning frameworks, targeting sublinear regret under unique action and reward information asymmetry settings",

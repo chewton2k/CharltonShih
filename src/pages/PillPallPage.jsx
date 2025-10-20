@@ -18,6 +18,22 @@ const PillPallPage = () => {
           PillPal is a web app focused on simplifying medication tracking and
           reminders with a friendly, accessible experience.
         </p>
+
+        <h3>motivation.</h3>
+        <p>
+        Managing daily medications can be confusing, especially for people who take multiple 
+        prescriptions or care for loved ones. Missed doses and timing errors are common, yet avoidable 
+        with the right tools. PillPall was created to make medication management intuitive, reliable, and personalized.
+        </p>
+        <h3>what it does.</h3>
+        <p>
+        PillPall helps users organize and track their medications through a clean, user-friendly interface. It sends timely reminders, 
+        logs dosage history, and can provide insights into adherence patterns. Designed with accessibility and ease of use in mind, it 
+        aims to reduce human error and improve medication consistency, especially for seniors and patients with complex regimens.
+        </p>
+        <h3> technical overview.</h3>
+        <p> Built using Typescript, React.js, MongoDB, Express, Arduino, and Websockets, PillPall integrates with a secure backend for data storage and 
+        leverages local notifications for timely alerts. The focus is on seamless UI/UX design, efficient data handling, and scalable architecture.</p>
       </div>
 
       <div className="pillpall-gallery">

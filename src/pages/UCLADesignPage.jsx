@@ -25,7 +25,7 @@ const UCLADesignPage = () => {
       </div>
 
       <div className="ucla-details">
-        <h3>Purpose / Features</h3>
+        <h3>purpose / features.</h3>
         <p>
         Transitioning into a new dorm room presents challenges, particularly for freshmen or individuals unfamiliar with their new environment. Properly planning a room layout and understanding the necessary items can significantly ease this transition. UCLA Design is a web application that helps users visualize and plan their next room. With built-in scaling, users won’t have to scale objects to their new room manually and can set dimensions for any new objects a user wants to import. Designs are dynamically stored within a database and can be queried for easy access to saved rooms. 
 	The platform also promotes user interaction and collaboration with built-in templating where all public rooms are displayed on a templates page, ready to be saved and personalized to anybody’s preference. With additional features such as a “todo-list” and “first day of college checklist,” users can also store personal items they need to be reminded about along with default essential items and tasks that need to be done. As for financial worries, prices for the default 14P meal plan are displayed, allowing users to manage or adjust their budget accordingly.
@@ -33,12 +33,12 @@ const UCLADesignPage = () => {
 
         </p>
 
-        <h3>Technology</h3>
+        <h3>technology.</h3>
         <p>
         For the technical aspects for our project, we utilize the MERN stack: MongoDB/Mongoose (database), Express, React, and Node. Scripts have also been installed like concurrently to run the client and server side simultaneously. For the frontend, Vite was used to set up a React-based template along with a TailwindCSS package for styling each component and page. Lastly, the project was mainly written using Javascript, HTML, and CSS.
         </p>
 
-        <h3>Contribution</h3>
+        <h3>contribution.</h3>
         <p>
         Throughout the project, I made several contributions toward the improvement and completion of the project. My first contribution was towards core development as I set up the repository and pushed a template of the project using Vite. At the beginning of the project, my development focused primarily on the client side, such as importing necessary packages to be used, like Express and tailwindcss, leading to an easy connection with endpoints between the frontend and the backend. I also populated our public folder with many designs and icons that would later be used to style all the pages.  
 	For my core/server-side development, I made several significant contributions. These included implementing user-generated items, adding the templates page with backend routes and controllers, creating object placement logic, and developing room schemas, routes, and controllers. For the user-generated items, I implemented a key backend feature that links item generation to a specific user ID, enabling personalized management. This feature later integrated seamlessly with other backend logic developed by the team, such as design schemas and controllers. For the templates page, I contributed to accurately displaying the object array, allowing users to visualize their design before saving their choices. In terms of placement logic, I enhanced the room design flow by enabling objects to be moved once dropped from the sidebar. This improvement not only boosted customization but also allowed the team to reallocate efforts toward other critical tasks that needed completion.

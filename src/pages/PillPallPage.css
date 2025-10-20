@@ -31,8 +31,11 @@
 }
 
 .pillpall-description {
-  width: 100%;
+  width: 900px; 
+  margin: 0 auto; 
+  text-align: left; 
 }
+
 
 .pillpall-description p {
   font-size: 1rem;
