@@ -135,9 +135,14 @@
   color: #000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .home { padding: 2rem; }
-  .feature-grid { grid-template-columns: 1fr; }
+
+  .feature-grid { 
+    grid-template-columns: 1fr; 
+    margin-bottom: 40px; 
+  
+  }
   .feature-media img { height: 240px; }
 
   .home-btn {
