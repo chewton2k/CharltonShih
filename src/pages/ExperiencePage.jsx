@@ -47,13 +47,14 @@ const experiences = [
     ]
   },
   {
-    role: "Autonomous Robotics Researcher",
+    role: "AI/ML Engineer Researcher",
     organization: "Arisaka Elegant Mind Lab",
     date: "July 2024 - July 2025",
     location: "Los Angeles, California",
     details: [
       "Collaborated with a 10-person team to develop affordable autonomous surgery robots under Prof. Arisaka and Yunbo Wang",
       "Established servomotor communication using ROS2, ESP32, and Python",
+      "Trained and tuned ACT policies using PyTorch and Mujoco, stabilizing learning across 5000+ epochs of human demonstration data",
       "Boosted tracking efficiency through OpenCV for ultrasound reconstruction and biopsy operations",
       "Applied imitation learning with ACT, CNNs, and motor outputs to enhance robotic operations"
     ]
