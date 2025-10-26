@@ -1,6 +1,15 @@
 import "./ExperiencePage.css";
 
 const experiences = [
+      {
+    role: "Software Engineering Intern",
+    organization: "Student Media at UCLA",
+    date: "October 2025 - Present",
+    location: "Los Angeles, California",
+    details: [
+      "Coming soon..."
+    ]
+  },
     {
     role: "Computational and AI Epigenetics Research Assistant",
     organization: "Pellegrini Lab and The Roychowdhury Group Lab",

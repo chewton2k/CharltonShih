@@ -15,7 +15,7 @@ const ProjectsPage = () => {
           <p className="project-description">
             Developed a real-time, state-managed drag-and-drop UI for furniture placement using React's component-based
             architecture and optimized event-driven rendering for seamless interactivity. Designed and optimized a NoSQL document database in MongoDB, indexing user-generated layouts and
-            integrating queryable search functionality.
+            integrating queryable search functionality for efficient retrieval and storage of design data
           </p>
           <p className="project-tech">
             React.js · MongoDB · Node.js · Express · JS · TailwindCSS
@@ -32,7 +32,7 @@ const ProjectsPage = () => {
             Collaborated with a 16-person team of mechanical, electrical, and UI/UX engineers to build Pill Pal, an automated pill
             dispenser that tracks usage and notifies users of scheduled doses. Developed a full-stack IoT system connecting ESP32 microcontrollers, servo motors, and IR sensors with a web platform
             to enable real-time dispensing and confirmation tracking. Integrated Google Calendar API, OAuth 2.0, and Google Cloud IAM to manage medication schedules with secure reminders
-            and event creation.
+            and event creation
           </p>
           <p className="project-tech">
             Typescript · React.js · MongoDB · Arduino · WebSocket
@@ -56,14 +56,31 @@ const ProjectsPage = () => {
           </a>
         </div>
 
-        {/* Project 2 - Club Scraper */}
+        <div className="project-card">
+          <h3 className="project-title">Redis</h3>
+          <p className="project-description">
+            Developed a high-concurrency Redis-like server using Python and Gevent, 
+            implementing asynchronous socket handling with StreamServer and connection 
+            pooling to efficiently manage multiple client requests simultaneously
+          </p>
+          <p className="project-tech">
+            Python
+          </p>
+          <a href="https://github.com/chewton2k/MiniRedis" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
+
+
+  
         <div className="project-card">
           <h3 className="project-title">Club Scraper</h3>
           <p className="project-description">
-            Python web scraper for gathering information on tech clubs at UCLA from their official student association page. Uses Selenium to automate browser actions and extract relevant data such as club names, emails, Instagram handles, and signatories.
+            Python web scraper for gathering information on tech clubs at UCLA from their official student association page. Uses Selenium to 
+            automate browser actions and extract relevant data such as club names, emails, Instagram handles, and signatories
           </p>
           <p className="project-tech">
-            python · jupyterlab · selenium
+            Python · jupyterlab · selenium
           </p>
           <a href="https://github.com/chewton2k/ClubScraper" target="_blank" rel="noopener noreferrer" className="project-link">
             View Project →
@@ -76,45 +93,17 @@ const ProjectsPage = () => {
           <p className="project-description">
             Built data frames and visualizations with Pandas, NumPy, and Jupyter to compare predictions with targets across
             10000 data points. Trained an ML model (scikit-learn) with 50% precision; optimized with backtesting (10 years of data) and new
-            predictors, boosting accuracy to 58.8%.
+            predictors, boosting accuracy to 58.8%
           </p>
           <p className="project-tech">
-            python · jupyterlab · Scikit-learn · Pandas · NumPy · matplotlib
+            Python · jupyterlab · Scikit-learn · Pandas · NumPy · matplotlib
           </p>
           <a href="https://github.com/chewton2k/PredictingStocks" target="_blank" rel="noopener noreferrer" className="project-link">
             View Project →
           </a>
         </div>
 
-        {/* Project 4 - Lotto Group */}
         <div className="project-card">
-          <h3 className="project-title">Lotto Group</h3>
-          <p className="project-description">
-            Enabled users to create groups and pool money for lottery ticket purchases, streamlining the process for workplaces and other communities. Developed using SwiftUI, implementing API calls to display California lottery drawings and jackpots. Leveraged Vision library to accurately scan and parse drawing numbers from tickets.
-          </p>
-          <p className="project-tech">
-            swift · Foundation · Swiftdata · Firebase · vision
-          </p>
-          <a href="https://github.com/chewton2k/Office-Group" target="_blank" rel="noopener noreferrer" className="project-link">
-            View Project →
-          </a>
-        </div>
-
-        {/* Project 6 - RiseAndWise */}
-        <div className="project-card">
-          <h3 className="project-title">RiseAndWise</h3>
-          <p className="project-description">
-            Built a smart alarm app in React Native that integrates with OpenAI's API to generate dynamic multiple-choice questions tied to a user's courses. Designed a reinforcement-based wake-up system requiring correct answers to deactivate alarms, combining academic review with daily routines. Implemented Supabase backend and Node.js API for course input, question storage, and scalable real-time question generation.
-          </p>
-          <p className="project-tech">
-            Typescript · React Native · Node · Supabase · ExpoGo
-          </p>
-          <a href="https://github.com/chewton2k/Rise-Wise" target="_blank" rel="noopener noreferrer" className="project-link">
-            View Project →
-          </a>
-        </div>
-
-              <div className="project-card">
           <h3 className="project-title">Blockchain</h3>
           <p className="project-description">
             Built a simplified blockchain in Python + Flask, implementing block structures with cryptographic hashing, proof-of-work
@@ -125,6 +114,34 @@ const ProjectsPage = () => {
             Python · Flask · Requests · Postman 
           </p>
           <a href="https://github.com/chewton2k/blockchain" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
+
+        <div className="project-card">
+          <h3 className="project-title">RiseAndWise</h3>
+          <p className="project-description">
+            Built a smart alarm app in React Native that integrates with OpenAI's API to generate dynamic multiple-choice 
+            questions tied to a user's courses. Designed a reinforcement-based wake-up system requiring correct answers to deactivate alarms, 
+            combining academic review with daily routines. Implemented Supabase backend and Node.js API for course input, question storage, and scalable real-time question generation
+          </p>
+          <p className="project-tech">
+            Typescript · React Native · Node · Supabase · ExpoGo
+          </p>
+          <a href="https://github.com/chewton2k/Rise-Wise" target="_blank" rel="noopener noreferrer" className="project-link">
+            View Project →
+          </a>
+        </div>
+
+        <div className="project-card">
+          <h3 className="project-title">Lotto Group</h3>
+          <p className="project-description">
+            Enabled users to create groups and pool money for lottery ticket purchases, streamlining the process for workplaces and other communities. Developed using SwiftUI, implementing API calls to display California lottery drawings and jackpots. Leveraged Vision library to accurately scan and parse drawing numbers from tickets
+          </p>
+          <p className="project-tech">
+            swift · Foundation · Swiftdata · Firebase · vision
+          </p>
+          <a href="https://github.com/chewton2k/Office-Group" target="_blank" rel="noopener noreferrer" className="project-link">
             View Project →
           </a>
         </div>
