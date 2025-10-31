@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  flex-direction: row; 
   justify-content: space-between; 
   align-items: center;    
   width: 100%;
@@ -43,22 +44,23 @@
   .footer {
     flex-direction: column; 
     display: flex; 
-    gap: 0.25rem;
+    gap: 1rem;
     width: 100vw;
     left: 0;
     right: 0;
-    padding: 0.5rem 0.75rem;
+    padding: 1.5rem 1rem;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-left,
   .footer-right {
     width: 100%;
+    justify-content: center;
   }
 
-
   .footer-right {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1.5rem;
   }
 }
