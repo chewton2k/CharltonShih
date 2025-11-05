@@ -3,7 +3,8 @@ import "./ExperiencePage.css";
 const experiences = [
       {
     role: "Software Engineering Intern",
-    organization: "Student Media at UCLA",
+    organization: "Bruinwalk (Student Media UCLA)",
+    link:"https://www.bruinwalk.com/",
     date: "October 2025 - Present",
     location: "Los Angeles, California",
     details: [
@@ -11,13 +12,14 @@ const experiences = [
     ]
   },
     {
-    role: "Computational and AI Epigenetics Research Assistant",
+    role: "Computational and AI Epigenetics Researcher",
     organization: "Pellegrini Lab and The Roychowdhury Group Lab",
     link: "https://www.vwaniroychowdhury.com/complexnetworks",
     date: "September 2025 - Present",
     location: "Los Angeles, California",
     details: [
-      "Coming soon..."
+      "Built genomic tokenization and embedding pipelines using Python, PyTorch, and Hugging Face Transformers to analyze plasma RRBS DNA, processing over 17 million+ reads to classify samples using SeqIO, NumPy, Pandas, and XGBoost",
+      "Applied PCA, UMAP, and LLM-based genomic embeddings to visualize methylation variance relationships across samples"
     ]
   },
   {
@@ -28,12 +30,12 @@ const experiences = [
     location: "Los Angeles, California",
     details: [
       "Developed a full-stack React, Next.js, Supabase, TailwindCSS, and Vercel, serving 200+ users since launch",
-      "Built and optimized database schemas and API integrations to handle over 1,000+ club entries across 40+ categories",
+      "Constructed and optimized SQL queries and API integrations to sort over 100+ reviews across 1,400+ club entries, streamlining data aggregation, improving accuracy, and workflow efficiency for development and deployment",
       "Worked alongside a 14-person cross-functional team to translate Hi-Fis into functional UI features using TailwindCSS"
     ]
   },
   {
-    role: "Machine Learning Researcher",
+    role: "Reinforcement Learning Researcher",
     organization: "BruinML Lab",
     date: "December 2025 - October 2025",
     location: "Los Angeles, California",
@@ -56,7 +58,7 @@ const experiences = [
     ]
   },
   {
-    role: "AI/ML Engineer Researcher",
+    role: "Machine Learning Researcher",
     organization: "Arisaka Elegant Mind Lab",
     date: "July 2024 - July 2025",
     location: "Los Angeles, California",
