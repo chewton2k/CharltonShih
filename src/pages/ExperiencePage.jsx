@@ -1,6 +1,16 @@
 import "./ExperiencePage.css";
 
 const experiences = [
+        {
+    role: "Software Engineering Intern",
+    organization: "AfterQuery",
+    link:"https://www.afterquery.com/",
+    date: "October 2025 - Present",
+    location: "San Francisco, California (remote)",
+    details: [
+      "Coming soon..."
+    ]
+  },
       {
     role: "Software Engineering Intern",
     organization: "Bruinwalk (Student Media UCLA)",
