@@ -1,8 +1,12 @@
-import {HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PageTransition from './components/PageTransition';
+
+// Pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -11,20 +15,59 @@ import ExperiencePage from './pages/ExperiencePage';
 import PillPallPage from './pages/PillPallPage';
 import UCLADesignPage from './pages/UCLADesignPage';
 
+// Inner component to access useLocation hook
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={
+          <PageTransition>
+            <HomePage />
+          </PageTransition>
+        } />
+        <Route path="/research" element={
+          <PageTransition>
+            <ResearchPage />
+          </PageTransition>
+        } />
+        <Route path="/experience" element={
+          <PageTransition>
+            <ExperiencePage />
+          </PageTransition>
+        } />
+        <Route path="/about" element={
+          <PageTransition>
+            <AboutPage />
+          </PageTransition>
+        } />
+        <Route path="/projects" element={
+          <PageTransition>
+            <ProjectsPage />
+          </PageTransition>
+        } />
+        <Route path="/projects/pillpall" element={
+          <PageTransition>
+            <PillPallPage />
+          </PageTransition>
+        } />
+        <Route path="/projects/ucla-design" element={
+          <PageTransition>
+            <UCLADesignPage />
+          </PageTransition>
+        } />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
   return (
     <Router>
-        <Navbar />
-        <div className="app-content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/research" element={<ResearchPage />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/pillpall" element={<PillPallPage />} />
-          <Route path="/projects/ucla-design" element={<UCLADesignPage />} />
-        </Routes>
+      <Navbar />
+      <div className="app-content">
+        <AnimatedRoutes />
       </div>
       <Footer />
     </Router>
