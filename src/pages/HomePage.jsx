@@ -1,56 +1,66 @@
 import './HomePage.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
-    <section id="home" className="home">
-      <header className="home-hero">
-        <h1 className="home-title">
-          I'm Charlton — exploring{' '}
-          <span className="rainbow-text">AI/ML</span> and{' '}
-          <span className="rainbow-text">software</span>
+    <div className="home-container">
+      <section className="hero-section">
+        <h1 className="hero-title">
+          I'm Charlton — exploring <span className="scrolling-text-gradient"> AI/ML</span> and <span className="scrolling-text-gradient">software</span>
         </h1>
-        <p className="home-subtitle">CS @ UCLA · graduating Spring 2027</p>
-      </header>
+        <p className="hero-subtitle">CS @ UCLA · graduating Spring 2027</p>
+        
+        <div className="cta-group">
+          <Link to="/projects" className="cta-button primary">View Projects</Link>
+          <Link to="/about" className="cta-button secondary">About Me</Link>
+        </div>
+      </section>
 
-      <div className="feature-grid">
-        <Link to="/projects/pillpall" className="feature-card" aria-label="View PillPall">
-          <div className="feature-media">
-            <img src="/CharltonShih/pillpall.png" alt="PillPall preview" />
-          </div>
-          <div className="feature-overlay">
-            <span className="feature-title">PillPal</span>
-          </div>
+      <section className="featured-work">
+        <div className="section-header">
+          <h2 className="section-title">Selected Works</h2>
+          <Link to="/projects" className="view-all-link">View All →</Link>
+        </div>
+        
+        <div className="feature-grid">
+          <Link to="/projects/pillpall" className="feature-card large" aria-label="View PillPal">
+            <div className="card-image-wrapper">
+              <img src="/CharltonShih/pillpall.png" alt="PillPal preview" />
+            </div>
+            <div className="card-info">
+              <span className="card-category">IoT / Healthcare</span>
+              <h3 className="card-title">PillPal</h3>
+            </div>
+          </Link>
+          
+          <Link to="/projects/ucla-design" className="feature-card" aria-label="View UCLA Design">
+            <div className="card-image-wrapper">
+              <img src="/CharltonShih/UCLAdesign.png" alt="UCLA Design preview" />
+            </div>
+            <div className="card-info">
+              <span className="card-category">Frontend / Design / Backend</span>
+              <h3 className="card-title">UCLA Design</h3>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      <section className="quick-links">
+        <Link to="/experience" className="link-card">
+          <span className="link-label">Experience</span>
+          <span className="link-arrow">→</span>
         </Link>
-        <Link to="/projects/ucla-design" className="feature-card" aria-label="View UCLA Design">
-          <div className="feature-media">
-            <img src="/CharltonShih/UCLAdesign.png" alt="UCLA Design preview" />
-          </div>
-          <div className="feature-overlay">
-            <span className="feature-title">UCLA Design</span>
-          </div>
-        </Link>
-      </div>
-
-      <div className="button-row">
-        <Link to="/about" className="home-btn">About → </Link>
-        <Link to="/experience" className="home-btn">Experience → </Link>
-        <Link to="/projects" className="home-btn">Projects → </Link>
-      </div>
-
-      <div className="home-tribute">
-        <h3 className="tribute-title">a small tribute to where it started...</h3>
-        <a
-          className="tribute-link"
-          href="https://chewton2k.github.io/Portfolio/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a 
+          href="https://chewton2k.github.io/Portfolio/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="link-card tribute"
         >
-          View my old portfolio →
+          <span className="link-label">Archived Portfolio</span>
+          <span className="link-arrow">↗</span>
         </a>
-      </div>
-
-    </section>
+      </section>
+    </div>
   );
 };
 
