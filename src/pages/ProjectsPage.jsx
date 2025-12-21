@@ -56,8 +56,34 @@ const ProjectsPage = () => {
             </div>
           </div>
 
+          {/* BTD Training */}
+          <div className="project-card with-image">
+            <div className="project-media">
+               <img src="/CharltonShih/btd.png" alt="BTD Training Camp" />
+               <div className="media-overlay">
+                  <Link to="/projects/btd-training" className="overlay-link">View Details</Link>
+               </div>
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">Bloon Towers Defense Training Camp</h3>
+              <p className="project-description">
+                A 3D FPS physics-based aim trainer built with Three.js. Features procedural waves, custom physics, and shadow mapping for a complete BTD experience.
+              </p>
+              <div className="project-tags">
+                <span>Three.js</span><span>JavaScript</span><span>Physics</span>
+              </div>
+              <div className="project-links">
+                <Link to="/projects/btd-training">Details →</Link>
+                <a href="https://github.com/chewton2k/BalloonTowerTraining" target="_blank" rel="noopener noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </div>
+
           {/* CrowdPlan */}
-          <div className="project-card">
+          <div className="project-card with-image">
+            <div className="project-media">
+               <div className="project-gradient gradient-crowd">📅</div>
+            </div>
             <div className="project-info">
               <h3 className="project-title">CrowdPlan</h3>
               <p className="project-description">
@@ -107,7 +133,10 @@ const ProjectsPage = () => {
           </div>
 
           {/* Stock Prediction */}
-          <div className="project-card">
+          <div className="project-card with-image">
+             <div className="project-media">
+               <div className="project-gradient gradient-stock">📈</div>
+            </div>
             <div className="project-info">
               <h3 className="project-title">Stock Prediction</h3>
               <p className="project-description">
@@ -139,7 +168,10 @@ const ProjectsPage = () => {
           </div>
 
           {/* RiseAndWise */}
-          <div className="project-card">
+          <div className="project-card with-image">
+             <div className="project-media">
+               <div className="project-gradient gradient-rise">⏰</div>
+            </div>
             <div className="project-info">
               <h3 className="project-title">RiseAndWise</h3>
               <p className="project-description">

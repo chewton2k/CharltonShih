@@ -153,6 +153,29 @@
   text-decoration: underline;
 }
 
+/* Gradient Visuals */
+.project-gradient {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.gradient-rise {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+}
+
+.gradient-crowd {
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 50%, #2dd4bf 100%);
+}
+
+.gradient-stock {
+  background: linear-gradient(135deg, #111827 0%, #374151 50%, #6b7280 100%);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .projects-section {

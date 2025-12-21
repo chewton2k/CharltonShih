@@ -1,0 +1,93 @@
+.btd-section {
+  padding: 3rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+.btd-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.btd-title {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 100;
+  color: #3f3e3e;
+  align-self: flex-start;
+}
+
+.btd-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: gray;
+  line-height: 1.6;
+}
+
+.btd-description {
+  width: 900px; 
+  margin: 0 auto; 
+  text-align: left; 
+}
+
+
+.btd-description p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: gray;
+  line-height: 1.6;
+}
+
+.btd-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btd-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f3f3f3;
+  cursor: zoom-in;
+}
+
+@media (max-width: 1024px) {
+  .btd-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .btd-section { padding: 2rem; }
+  .btd-gallery { grid-template-columns: 1fr; }
+}
+
+/* Lightbox */
+.btd-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.btd-lightbox-inner {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.btd-lightbox-inner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}

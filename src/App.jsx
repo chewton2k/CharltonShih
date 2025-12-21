@@ -14,6 +14,7 @@ import ResearchPage from './pages/ResearchPage';
 import ExperiencePage from './pages/ExperiencePage';
 import PillPallPage from './pages/PillPallPage';
 import UCLADesignPage from './pages/UCLADesignPage';
+import BTDTrainingPage from './pages/BTDTrainingPage';
 
 // Inner component to access useLocation hook
 function AnimatedRoutes() {
@@ -55,6 +56,11 @@ function AnimatedRoutes() {
         <Route path="/projects/ucla-design" element={
           <PageTransition>
             <UCLADesignPage />
+          </PageTransition>
+        } />
+        <Route path="/projects/btd-training" element={
+          <PageTransition>
+            <BTDTrainingPage />
           </PageTransition>
         } />
       </Routes>
