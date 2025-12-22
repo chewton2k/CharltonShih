@@ -24,7 +24,7 @@ const HomePage = () => {
         
         <div className="feature-grid">
 
-          <Link to="https://www.bruinwalk.com/" className="feature-card" aria-label="View Bruinwalk">
+          <Link to="https://www.bruinwalk.com/" target="_blank" rel="noopener noreferrer" className="feature-card" aria-label="View Bruinwalk">
              <div className="card-image-wrapper">
               <img src="/CharltonShih/bruinwalk.png" alt="Bruinwalk preview" />
             </div>
@@ -34,7 +34,7 @@ const HomePage = () => {
             </div>
           </Link>
 
-          <Link to="https://www.clubhouseucla.com/" className="feature-card" aria-label="View UCLA Clubhouse">
+          <Link to="https://www.clubhouseucla.com/" target="_blank" rel="noopener noreferrer" className="feature-card" aria-label="View UCLA Clubhouse">
              <div className="card-image-wrapper">
               <img src="/CharltonShih/clubhouse1.png" alt="UCLA Clubhouse preview" />
             </div>
