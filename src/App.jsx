@@ -15,6 +15,8 @@ import ExperiencePage from './pages/ExperiencePage';
 import PillPallPage from './pages/PillPallPage';
 import UCLADesignPage from './pages/UCLADesignPage';
 import BTDTrainingPage from './pages/BTDTrainingPage';
+import BruinwalkPage from './pages/BruinwalkPage';
+import UCLAClubhousePage from './pages/UCLAClubhousePage';
 
 // Inner component to access useLocation hook
 function AnimatedRoutes() {
@@ -61,6 +63,16 @@ function AnimatedRoutes() {
         <Route path="/projects/btd-training" element={
           <PageTransition>
             <BTDTrainingPage />
+          </PageTransition>
+        } />
+        <Route path="/projects/bruinwalk" element={
+          <PageTransition>
+            <BruinwalkPage />
+          </PageTransition>
+        } />
+        <Route path="/projects/clubhouse" element={
+          <PageTransition>
+            <UCLAClubhousePage />
           </PageTransition>
         } />
       </Routes>

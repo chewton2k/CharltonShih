@@ -23,6 +23,29 @@ const HomePage = () => {
         </div>
         
         <div className="feature-grid">
+
+          <Link to="https://www.bruinwalk.com/" className="feature-card" aria-label="View Bruinwalk">
+             <div className="card-image-wrapper">
+              <img src="/CharltonShih/bruinwalk.png" alt="Bruinwalk preview" />
+            </div>
+            <div className="card-info">
+              <span className="card-category">Education / Data</span>
+              <h3 className="card-title">Bruinwalk</h3>
+            </div>
+          </Link>
+
+          <Link to="https://www.clubhouseucla.com/" className="feature-card" aria-label="View UCLA Clubhouse">
+             <div className="card-image-wrapper">
+              <img src="/CharltonShih/clubhouse1.png" alt="UCLA Clubhouse preview" />
+            </div>
+            <div className="card-info">
+              <span className="card-category">Education / Community</span>
+              <h3 className="card-title">UCLA Clubhouse</h3>
+            </div>
+          </Link>
+
+
+
           <Link to="/projects/pillpall" className="feature-card large" aria-label="View PillPal">
             <div className="card-image-wrapper">
               <img src="/CharltonShih/pillpall.png" alt="PillPal preview" />

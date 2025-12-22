@@ -79,6 +79,28 @@ const ProjectsPage = () => {
             </div>
           </div>
 
+          {/* HourTrack */}
+          <div className="project-card with-image">
+            <div className="project-media">
+               <img src="/CharltonShih/hourtrack.png" alt="HourTrack" />
+               <div className="media-overlay">
+                  <a href="https://hourtracker-59385.web.app/" target="_blank" rel="noopener noreferrer" className="overlay-link">View Website</a>
+               </div>
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">HourTrack</h3>
+              <p className="project-description">
+                A productivity tool for tracking hours and managing tasks efficiently.
+              </p>
+              <div className="project-tags">
+                <span>React</span><span>Firebase</span><span>Productivity</span>
+              </div>
+              <div className="project-links">
+                <a href="https://github.com/chewton2k/hourtracker" target="_blank" rel="noopener noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </div>
+
           {/* CrowdPlan */}
           <div className="project-card with-image">
             <div className="project-media">
