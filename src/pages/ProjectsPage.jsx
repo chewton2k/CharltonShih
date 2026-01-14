@@ -103,9 +103,6 @@ const ProjectsPage = () => {
 
           {/* CrowdPlan */}
           <div className="project-card with-image">
-            <div className="project-media">
-               <div className="project-gradient gradient-crowd">📅</div>
-            </div>
             <div className="project-info">
               <h3 className="project-title">CrowdPlan</h3>
               <p className="project-description">
@@ -156,9 +153,6 @@ const ProjectsPage = () => {
 
           {/* Stock Prediction */}
           <div className="project-card with-image">
-             <div className="project-media">
-               <div className="project-gradient gradient-stock">📈</div>
-            </div>
             <div className="project-info">
               <h3 className="project-title">Stock Prediction</h3>
               <p className="project-description">
@@ -191,9 +185,6 @@ const ProjectsPage = () => {
 
           {/* RiseAndWise */}
           <div className="project-card with-image">
-             <div className="project-media">
-               <div className="project-gradient gradient-rise">⏰</div>
-            </div>
             <div className="project-info">
               <h3 className="project-title">RiseAndWise</h3>
               <p className="project-description">

@@ -96,18 +96,68 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #f0f0f0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 100%; /* Ensure content fills space */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+  cursor: pointer;
 }
 
 .timeline-content:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #8b5cf6;
+}
+
+.timeline-content.expanded {
+  border-color: #8b5cf6;
+}
+
+/* Card Header Layout */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-info {
+  flex: 1;
+}
+
+/* Expand Icon */
+.expand-icon {
+  color: #9ca3af;
+  transition: transform 0.3s ease, color 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.timeline-content:hover .expand-icon {
+  color: #8b5cf6;
+}
+
+.expand-icon.rotated {
+  transform: rotate(180deg);
+  color: #8b5cf6;
+}
+
+/* Details Wrapper for Animation */
+.details-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 0;
+}
+
+.details-wrapper.open {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: 1rem;
 }
 
 /* Typography */
 .role-badge {
   display: inline-block;
+  width: fit-content;
   font-size: 0.8rem;
   font-weight: 500;
   color: #8b5cf6;
@@ -115,6 +165,10 @@
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   margin-bottom: 0.5rem;
+}
+
+.timeline-item.left .role-badge {
+  margin-left: auto;
 }
 
 .organization-name {
@@ -144,7 +198,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-size: 0.9rem;
   color: #6b7280;
 }
@@ -154,6 +208,14 @@
 }
 .timeline-item.right .meta-info {
   align-items: flex-start;
+}
+
+.timeline-item.left .card-header {
+  flex-direction: row-reverse;
+}
+
+.timeline-item.left .card-info {
+  text-align: right;
 }
 
 .details-list {
@@ -212,5 +274,13 @@
 
   .timeline-item.left .meta-info {
     align-items: flex-start; /* Left align meta info on mobile */
+  }
+
+  .timeline-item.left .card-header {
+    flex-direction: row; /* Reset to normal direction on mobile */
+  }
+
+  .timeline-item.left .card-info {
+    text-align: left;
   }
 }
