@@ -1,0 +1,202 @@
+/* LaptopFrame.css - MacBook-style laptop container */
+
+.laptop-frame {
+  --laptop-width: 90vw;
+  --laptop-max-width: 1100px;
+  --bezel-color: #1a1a1a;
+  --body-color: #2d2d2d;
+  --screen-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--laptop-width);
+  max-width: var(--laptop-max-width);
+  margin: 0 auto;
+}
+
+/* Screen section (contains bezel and display) */
+.laptop-frame__screen {
+  width: 100%;
+  background: linear-gradient(180deg, #3d3d3d 0%, #2d2d2d 100%);
+  border-radius: var(--screen-radius) var(--screen-radius) 0 0;
+  padding: 8px 8px 0 8px;
+  box-shadow:
+    0 -2px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Bezel around the display */
+.laptop-frame__bezel {
+  background: var(--bezel-color);
+  border-radius: 8px 8px 0 0;
+  padding: 12px 6px 6px 6px;
+  position: relative;
+}
+
+/* Camera dot at top of bezel */
+.laptop-frame__camera {
+  width: 6px;
+  height: 6px;
+  background: #1f1f1f;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow:
+    inset 0 0 2px rgba(0, 0, 0, 0.8),
+    0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.laptop-frame__camera::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #2a4d2a;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* The actual display area */
+.laptop-frame__display {
+  background: #0d1117;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  min-height: 500px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for display */
+.laptop-frame__display::-webkit-scrollbar {
+  width: 8px;
+}
+
+.laptop-frame__display::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.laptop-frame__display::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+.laptop-frame__display::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Bottom edge of screen (hinge area) */
+.laptop-frame__bottom {
+  width: 100%;
+  height: 16px;
+  background: linear-gradient(180deg, #2d2d2d 0%, #252525 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Notch/hinge detail */
+.laptop-frame__notch {
+  width: 25%;
+  max-width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #1a1a1a 10%,
+    #1a1a1a 90%,
+    transparent 100%
+  );
+  border-radius: 0 0 4px 4px;
+}
+
+/* Base of the laptop (keyboard area representation) */
+.laptop-frame__base {
+  width: 105%;
+  height: 12px;
+  background: linear-gradient(180deg, #252525 0%, #1f1f1f 100%);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Small touchpad indicator */
+.laptop-frame__touchpad {
+  width: 20%;
+  max-width: 120px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1px;
+  margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .laptop-frame {
+    --laptop-width: 95vw;
+  }
+
+  .laptop-frame__display {
+    min-height: 450px;
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .laptop-frame {
+    --laptop-width: 100vw;
+  }
+
+  .laptop-frame__screen {
+    padding: 6px 6px 0 6px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .laptop-frame__bezel {
+    padding: 10px 4px 4px 4px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .laptop-frame__display {
+    min-height: 400px;
+    max-height: 60vh;
+  }
+
+  .laptop-frame__bottom {
+    height: 12px;
+  }
+
+  .laptop-frame__base {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laptop-frame__screen {
+    padding: 4px 4px 0 4px;
+  }
+
+  .laptop-frame__bezel {
+    padding: 8px 3px 3px 3px;
+  }
+
+  .laptop-frame__camera {
+    width: 4px;
+    height: 4px;
+    top: 3px;
+  }
+
+  .laptop-frame__display {
+    min-height: 350px;
+  }
+}

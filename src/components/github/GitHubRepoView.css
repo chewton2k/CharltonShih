@@ -1,0 +1,40 @@
+/* GitHubRepoView.css - Main container for GitHub repository UI */
+
+.github-repo-view {
+  background: #0d1117;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.github-repo-view__content {
+  padding-bottom: 24px;
+}
+
+/* Ensure smooth transitions between views */
+.github-repo-view__content > * {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .github-repo-view__content {
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-repo-view__content {
+    padding-bottom: 12px;
+  }
+}
