@@ -111,6 +111,13 @@
   margin-bottom: 0.5rem;
 }
 
+.project-award {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d97706;
+  margin-bottom: 0.5rem;
+}
+
 .project-description {
   font-size: 0.95rem;
   color: #64748b;

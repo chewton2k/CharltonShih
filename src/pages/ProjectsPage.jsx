@@ -9,6 +9,31 @@ const ProjectsPage = () => {
       <div className="projects-content-wrapper">
         <h2 className="projects-title">projects.</h2>
         <div className="projects-grid">
+          {/* Imprint */}
+          <div className="project-card with-image">
+            <div className="project-media">
+               <img src="/CharltonShih/imprint.png" alt="Imprint" />
+               <div className="media-overlay">
+                  <a href="https://app-imprint.vercel.app/" target="_blank" rel="noopener noreferrer" className="overlay-link">View Website</a>
+               </div>
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">Imprint</h3>
+              <p className="project-award">QWER Hacks Winner — Most Impactful Project</p>
+              <p className="project-description">
+                Imprint is a provenance tool that lets creators prove they authored a piece of work — without uploading the work itself. It creates a tamper-proof, cryptographically signed record that ties your identity to your content.
+                Think of it like a notarized timestamp for your creative work, except you don't need a notary — just your browser.
+              </p>
+              <div className="project-tags">
+                <span>Javascript</span><span>Docker</span><span>Supabase</span><span>Next.js</span>
+              </div>
+              <div className="project-links">
+                <a href="https://app-imprint.vercel.app/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
+                <a href="https://github.com/chewton2k/Imprint" target="_blank" rel="noopener noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </div>
+
           {/* Project 1 - UCLA Design */}
           <div className="project-card with-image">
             <div className="project-media">
