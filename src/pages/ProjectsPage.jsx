@@ -86,7 +86,7 @@ const ProjectsPage = () => {
             <div className="project-media">
                <img src="/CharltonShih/btd.png" alt="BTD Training Camp" />
                <div className="media-overlay">
-                  <Link to="/projects/btd-training" className="overlay-link">View Details</Link>
+                  <a href="https://diandyw.github.io/BTDTrainingCamp/" target="_blank" rel="noopener noreferrer" className="overlay-link">View Website</a>
                </div>
             </div>
             <div className="project-info">
@@ -98,7 +98,7 @@ const ProjectsPage = () => {
                 <span>Three.js</span><span>JavaScript</span><span>Physics</span>
               </div>
               <div className="project-links">
-                <Link to="/projects/btd-training">Details →</Link>
+                <a href="https://diandyw.github.io/BTDTrainingCamp/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
                 <a href="https://github.com/chewton2k/BalloonTowerTraining" target="_blank" rel="noopener noreferrer">Code ↗</a>
               </div>
             </div>
@@ -121,6 +121,7 @@ const ProjectsPage = () => {
                 <span>React</span><span>Firebase</span><span>Productivity</span>
               </div>
               <div className="project-links">
+                <a href="https://hourtracker-59385.web.app/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
                 <a href="https://github.com/chewton2k/hourtracker" target="_blank" rel="noopener noreferrer">Code ↗</a>
               </div>
             </div>

@@ -14,7 +14,7 @@ import ResearchPage from './pages/ResearchPage';
 import ExperiencePage from './pages/ExperiencePage';
 import PillPallPage from './pages/PillPallPage';
 import UCLADesignPage from './pages/UCLADesignPage';
-import BTDTrainingPage from './pages/BTDTrainingPage';
+
 import BruinwalkPage from './pages/BruinwalkPage';
 import UCLAClubhousePage from './pages/UCLAClubhousePage';
 
@@ -60,11 +60,7 @@ function AnimatedRoutes() {
             <UCLADesignPage />
           </PageTransition>
         } />
-        <Route path="/projects/btd-training" element={
-          <PageTransition>
-            <BTDTrainingPage />
-          </PageTransition>
-        } />
+
         <Route path="/projects/bruinwalk" element={
           <PageTransition>
             <BruinwalkPage />
