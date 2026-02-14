@@ -46,25 +46,6 @@ const HomePage = () => {
 
 
 
-          <Link to="/projects/pillpall" className="feature-card large" aria-label="View PillPal">
-            <div className="card-image-wrapper">
-              <img src="/CharltonShih/pillpall.png" alt="PillPal preview" />
-            </div>
-            <div className="card-info">
-              <span className="card-category">IoT / Healthcare</span>
-              <h3 className="card-title">PillPal</h3>
-            </div>
-          </Link>
-          
-          <Link to="/projects/ucla-design" className="feature-card" aria-label="View UCLA Design">
-            <div className="card-image-wrapper">
-              <img src="/CharltonShih/UCLAdesign.png" alt="UCLA Design preview" />
-            </div>
-            <div className="card-info">
-              <span className="card-category">Frontend / Design / Backend</span>
-              <h3 className="card-title">UCLA Design</h3>
-            </div>
-          </Link>
         </div>
       </section>
 
