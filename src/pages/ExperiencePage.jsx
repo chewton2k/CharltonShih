@@ -1,7 +1,19 @@
 import { useState } from "react";
 import "./ExperiencePage.css";
 
+// i want to add some logos to the side of the name of the company, small ones 
+
 const experiences = [
+    {
+    role: "Software Engineer",
+    organization: "ACM TeachLA (UCLA)",
+    link: "https://teachla.uclaacm.com/",
+    date: "February 2026 - Present",
+    location: "Los Angeles, California",
+    details: [
+      "Coming Soon...",
+    ],
+  },
   {
     role: "Software Engineering Intern",
     organization: "AfterQuery",
