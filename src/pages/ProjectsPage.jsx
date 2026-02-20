@@ -34,6 +34,28 @@ const ProjectsPage = () => {
             </div>
           </div>
 
+
+            <div className="project-card with-image">
+            <div className="project-media">
+               <img src="/CharltonShih/embd-IDE.png" alt="embd-IDE" />
+               <div className="media-overlay">
+                  <a href="https://github.com/chewton2k/embd-ide" target="_blank" rel="noopener noreferrer" className="overlay-link">View App</a>
+               </div>
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">embd-IDE</h3>
+              <p className="project-description">
+                A simple lightweight IDE that has everything you need for everyday programming.
+              </p>
+              <div className="project-tags">
+                <span>Typescript</span><span>Rust</span><span>Svelte</span><span>Tauri</span>
+              </div>
+              <div className="project-links">
+                <a href="https://github.com/chewton2k/embd-ide" target="_blank" rel="noopener noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </div>
+
           {/* Project 1 - UCLA Design */}
           <div className="project-card with-image">
             <div className="project-media">
@@ -54,29 +76,6 @@ const ProjectsPage = () => {
               <div className="project-links">
                 <Link to="/projects/ucla-design">Case Study →</Link>
                 <a href="https://github.com/chewton2k/UCLADesign" target="_blank" rel="noopener noreferrer">Code ↗</a>
-              </div>
-            </div>
-          </div>
-
-          {/* Project 2 - PillPal */}
-          <div className="project-card with-image">
-            <div className="project-media">
-               <img src="/CharltonShih/pillpall.png" alt="PillPal" />
-               <div className="media-overlay">
-                  <Link to="/projects/pillpall" className="overlay-link">View Details</Link>
-               </div>
-            </div>
-            <div className="project-info">
-              <h3 className="project-title">PillPal</h3>
-              <p className="project-description">
-                Automated pill dispenser with tracking and notifications. Full-stack IoT system connecting ESP32, servo motors, and IR sensors.
-                Integrated Google Calendar API and OAuth 2.0 for schedule management.
-              </p>
-              <div className="project-tags">
-                <span>IoT</span><span>React</span><span>MongoDB</span>
-              </div>
-              <div className="project-links">
-                <Link to="/projects/pillpall">Case Study →</Link>
               </div>
             </div>
           </div>
@@ -139,7 +138,31 @@ const ProjectsPage = () => {
                 <span>Next.js</span><span>PostgreSQL</span><span>Docker</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/CrowdPlan" target="_blank" rel="noopener noreferrer">Code (Unavailable) ↗</a>
+                <a href="https://github.com/chewton2k/CrowdPlan" target="_blank" rel="noopener noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Project 2 - PillPal */}
+          <div className="project-card with-image">
+            <div className="project-media">
+               <img src="/CharltonShih/pillpall.png" alt="PillPal" />
+               <div className="media-overlay">
+                  <Link to="/projects/pillpall" className="overlay-link">View Details</Link>
+               </div>
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">PillPal</h3>
+              <p className="project-description">
+                Automated pill dispenser with tracking and notifications. Full-stack IoT system connecting ESP32, servo motors, and IR sensors.
+                Integrated Google Calendar API and OAuth 2.0 for schedule management.
+              </p>
+              <div className="project-tags">
+                <span>IoT</span><span>React</span><span>MongoDB</span>
+              </div>
+              <div className="project-links">
+                <Link to="/projects/pillpall">Case Study →</Link>
               </div>
             </div>
           </div>
