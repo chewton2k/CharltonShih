@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./ExperiencePage.css";
 
-// i want to add some logos to the side of the name of the company, small ones 
 
 const experiences = [
     {
     role: "Software Engineer",
     organization: "ACM TeachLA (UCLA)",
+    logo: "/teachLA.png",
     link: "https://teachla.uclaacm.com/",
     date: "February 2026 - Present",
     location: "Los Angeles, California",
@@ -17,6 +17,7 @@ const experiences = [
   {
     role: "Software Engineering Intern",
     organization: "AfterQuery",
+    logo: "/afterquery.png",
     link: "https://www.afterquery.com/",
     date: "October 2025 - Present",
     location: "San Francisco, California (remote)",
@@ -30,6 +31,7 @@ const experiences = [
   {
     role: "Software Engineering",
     organization: "Bruinwalk (Student Media UCLA)",
+    logo: "/bruinwalk_logo.png",
     link: "https://www.bruinwalk.com/",
     date: "October 2025 - Present",
     location: "Los Angeles, California",
@@ -42,6 +44,7 @@ const experiences = [
   {
     role: "Computational and AI Epigenetics Researcher",
     organization: "Pellegrini Lab and The Roychowdhury Group Lab",
+    logo: "/ucla_engineering.png",
     link: "https://www.vwaniroychowdhury.com/complexnetworks",
     date: "September 2025 - January 2026",
     location: "Los Angeles, California",
@@ -53,6 +56,7 @@ const experiences = [
   {
     role: "Software Engineer",
     organization: "Clubhouse @ UCLA",
+    logo: "/clubhouse_ucla.png",
     link: "https://www.clubhouseucla.com/",
     date: "March 2025 - Present",
     location: "Los Angeles, California",
@@ -65,6 +69,7 @@ const experiences = [
   {
     role: "Reinforcement Learning Researcher",
     organization: "BruinML Lab",
+    logo: "/BruinML.png",
     date: "December 2025 - October 2026",
     location: "Los Angeles, California",
     details: [
@@ -76,6 +81,7 @@ const experiences = [
   {
     role: "Software Engineer",
     organization: "AdOptimal",
+    logo: "/adoptimal.png",
     date: "December 2025 - August 2025",
     location: "Los Angeles, California",
     details: [
@@ -88,6 +94,7 @@ const experiences = [
   {
     role: "Machine Learning Researcher",
     organization: "Arisaka Elegant Mind Lab",
+    logo: "/ucla_engineering.png",
     date: "July 2024 - July 2025",
     location: "Los Angeles, California",
     details: [
@@ -101,6 +108,7 @@ const experiences = [
   {
     role: "Learning Assistant (CS 35L)",
     organization: "UCLA Henry Samueli School of Engineering and Applied Science",
+    logo: "/ucla_engineering.png",
     link: "https://web.cs.ucla.edu/classes/spring1f/cs35L/",
     date: "March 2025 - June 2025",
     location: "Los Angeles, California",
@@ -112,6 +120,7 @@ const experiences = [
   {
     role: "Learning Assistant (Math 32B)",
     organization: "UCLA Henry Samueli School of Engineering and Applied Science",
+    logo: "/ucla_engineering.png",
     link: "https://catalog.registrar.ucla.edu/course/2022/math32b?siteYear=2022",
     date: "January 2024 - July 2024",
     location: "Los Angeles, California",
@@ -144,22 +153,31 @@ const ExperiencePage = () => {
                 <div className="card-header">
                   <div className="card-info">
                     <div className="role-badge">{exp.role}</div>
-                    <h3 className="organization-name">
-                      {exp.link ? (
-                        <a
-                          href={exp.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="org-link"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          {exp.organization}
-                          <span className="link-arrow">↗</span>
-                        </a>
-                      ) : (
-                        exp.organization
+                    <div className="org-row">
+                      {exp.logo && (
+                        <img
+                          src={`${import.meta.env.BASE_URL}${exp.logo.replace(/^\//, '')}`}
+                          alt={`${exp.organization} logo`}
+                          className="org-logo"
+                        />
                       )}
-                    </h3>
+                      <h3 className="organization-name">
+                        {exp.link ? (
+                          <a
+                            href={exp.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="org-link"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {exp.organization}
+                            <span className="link-arrow">↗</span>
+                          </a>
+                        ) : (
+                          exp.organization
+                        )}
+                      </h3>
+                    </div>
                     <div className="meta-info">
                       <span className="date">{exp.date}</span>
                       <span className="location">{exp.location}</span>

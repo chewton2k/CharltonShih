@@ -171,6 +171,20 @@
   margin-left: auto;
 }
 
+.org-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.org-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
 .organization-name {
   font-size: 1.25rem;
   font-weight: 600;
@@ -201,6 +215,10 @@
   margin-bottom: 0;
   font-size: 0.9rem;
   color: #6b7280;
+}
+
+.timeline-item.left .org-row {
+  flex-direction: row-reverse;
 }
 
 .timeline-item.left .meta-info {
