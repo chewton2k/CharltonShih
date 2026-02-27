@@ -70,7 +70,7 @@ const experiences = [
     role: "Reinforcement Learning Researcher",
     organization: "BruinML Lab",
     logo: "/BruinML.png",
-    date: "December 2025 - October 2026",
+    date: "December 2024 - October 2025",
     location: "Los Angeles, California",
     details: [
       "Collaborated with a three-person team to design and develop multiplayer DCM cascading bandits under reinforcement learning frameworks, targeting sublinear regret under unique action and reward information asymmetry settings",
@@ -82,7 +82,7 @@ const experiences = [
     role: "Software Engineer",
     organization: "AdOptimal",
     logo: "/adoptimal.png",
-    date: "December 2025 - August 2025",
+    date: "December 2024 - August 2025",
     location: "Los Angeles, California",
     details: [
       "Ad-Optimal connects businesses with student organizations, simplifying processes for advertisements and transactions",
