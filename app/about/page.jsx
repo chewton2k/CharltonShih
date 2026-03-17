@@ -58,8 +58,6 @@ const AboutPage = () => {
           <img src="/motor.png" alt="gallery 4" />
         </div>
 
-        <br/>
-
         <div className="image-row">
           <img src="/tennis.png" alt="gallery 5" />
           <img src="/don.jpeg" alt="gallery 6" />
