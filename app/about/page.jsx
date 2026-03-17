@@ -13,7 +13,7 @@ const AboutPage = () => {
           </h1>
           <p>
             My name is Charlton Shih and I&apos;m a
-            software developer/ ML researcher based in Los Angeles, California!
+            software developer/ML researcher based in Los Angeles, California!
             I have a strong interest in applying algorithms
             and data structures to solve real-world problems,
             particularly in the fields of machine
@@ -24,10 +24,10 @@ const AboutPage = () => {
             <span className="highlight">UCLA</span> pursuing a B.S. Computer Science.
             My approach combines exploring the applications of mathematics and computer
             science to develop algorithms and solve real-world problems! I&apos;m passionate
-            about mathematics, and I&apos;m currently working on optimization problems, machine
-            learning models, and device development. In my spare time, I challenge myself
+            about mathematics, and I&apos;m currently working on optimization problems, reinforcement
+            learning environments, and device development. In my spare time, I challenge myself
             to be active and dedicate time to learning—whether it&apos;s building new projects,
-            exploring new concepts within math and cs, or my recent interest in dabbling with blockchain and cryptocurrency.
+            exploring new concepts within math and cs, or my recent interest in dabbling with blockchain and IDE's.
           </p>
           <p>
             You can reach out to me via{" "}
