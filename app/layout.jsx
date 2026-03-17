@@ -16,6 +16,7 @@ import './styles/UCLAClubhousePage.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'CharltonShih',
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
