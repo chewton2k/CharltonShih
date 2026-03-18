@@ -1,10 +1,12 @@
 .ucla-section {
-  padding: 3rem 10rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .ucla-header {
@@ -15,17 +17,18 @@
 }
 
 .ucla-title {
-  font-size: 2.4rem;
-  line-height: 1.2;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.12;
   margin-bottom: 0.5rem;
-  font-weight: 100;
-  color: #3f3e3e;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: -0.03em;
 }
 
 .ucla-subtitle {
   font-size: 1rem;
-  font-weight: 300;
-  color: gray;
+  font-weight: 400;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -34,18 +37,27 @@
 }
 
 .ucla-description p {
-  font-size: 1rem;
-  font-weight: 300;
-  color: gray;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.ucla-description h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .ucla-video { width: 100%; }
 .ucla-video-inner {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
-  border-radius: 8px;
+  padding-bottom: 56.25%;
+  border-radius: 14px;
   overflow: hidden;
   background: #000;
 }
@@ -60,27 +72,44 @@
 .ucla-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
   width: 100%;
 }
 
 .ucla-gallery img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   object-fit: cover;
-  background: #f3f3f3;
+  background: var(--bg-placeholder);
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.ucla-gallery img:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 1024px) {
   .ucla-gallery { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 640px) {
-  .ucla-section { padding: 2rem; }
-}
-
 .ucla-details {
-  max-width: 900px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: left;
+}
+
+.ucla-details h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ucla-details p {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }

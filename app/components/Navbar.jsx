@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
           <Link href="/projects" onClick={closeMenu}>PROJECTS</Link>
           <Link href="/about" onClick={closeMenu}>ABOUT</Link>
         </div>
+        <ThemeToggle />
         <button className="burger" aria-label="Toggle navigation" onClick={toggleMenu}>
           <input className="line" type="checkbox" checked={isOpen} readOnly />
         </button>

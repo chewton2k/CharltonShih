@@ -1,10 +1,12 @@
 .pillpall-section {
-  padding: 3rem 10rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .pillpall-header {
@@ -15,49 +17,62 @@
 }
 
 .pillpall-title {
-  font-size: 2.4rem;
-  line-height: 1.2;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.12;
   margin-bottom: 0.5rem;
-  font-weight: 100;
-  color: #3f3e3e;
-  align-self: flex-start;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: -0.03em;
 }
 
 .pillpall-subtitle {
   font-size: 1rem;
-  font-weight: 300;
-  color: gray;
+  font-weight: 400;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 .pillpall-description {
-  width: 900px;
+  max-width: 720px;
+  width: 100%;
   margin: 0 auto;
   text-align: left;
 }
 
-
 .pillpall-description p {
-  font-size: 1rem;
-  font-weight: 300;
-  color: gray;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.pillpall-description h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .pillpall-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
   width: 100%;
-  border-radius: 8px;
 }
 
 .pillpall-gallery img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   object-fit: cover;
-  background: #f3f3f3;
+  background: var(--bg-placeholder);
   cursor: zoom-in;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.pillpall-gallery img:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 1024px) {
@@ -65,7 +80,7 @@
 }
 
 @media (max-width: 640px) {
-  .pillpall-section { padding: 2rem; }
+  .pillpall-description { width: 100%; }
   .pillpall-gallery { grid-template-columns: 1fr; }
 }
 
@@ -73,11 +88,12 @@
 .pillpall-lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 50;
+  backdrop-filter: blur(8px);
 }
 
 .pillpall-lightbox-inner {
@@ -88,6 +104,5 @@
 .pillpall-lightbox-inner img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  border-radius: 12px;
 }

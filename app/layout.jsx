@@ -1,3 +1,5 @@
+import { Inter } from 'next/font/google';
+
 import './globals.css';
 import './components/Navbar.css';
 import './components/Burger.css';
@@ -16,10 +18,17 @@ import './styles/UCLAClubhousePage.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ThemeProvider from './components/ThemeProvider';
 import { Analytics } from '@vercel/analytics/next';
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
 export const metadata = {
-  title: 'CharltonShih',
+  title: 'Charlton Shih',
   icons: {
     icon: '/snoopy.png',
   },
@@ -27,13 +36,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t)})()`,
+          }}
+        />
+      </head>
       <body>
-        <Navbar />
-        <div className="app-content">
-          {children}
-        </div>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <div className="app-content">
+            {children}
+          </div>
+          <Footer />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
