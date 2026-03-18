@@ -26,8 +26,8 @@ const ProjectsPage = () => {
                 <span>Javascript</span><span>Docker</span><span>Supabase</span><span>Next.js</span>
               </div>
               <div className="project-links">
-                <a href="https://app-imprint.vercel.app/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-                <a href="https://github.com/chewton2k/Imprint" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://app-imprint.vercel.app/" target="_blank" rel="noopener noreferrer">Live Site &rarr;</a>
+                <a href="https://github.com/chewton2k/Imprint" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
                 <span>Typescript</span><span>Rust</span><span>Svelte</span><span>Tauri</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/embd-ide" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/embd-ide" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ const ProjectsPage = () => {
               </div>
               <div className="project-links">
                 <Link href="/projects/ucla-design">Case Study →</Link>
-                <a href="https://github.com/chewton2k/UCLADesign" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/UCLADesign" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -95,8 +95,8 @@ const ProjectsPage = () => {
                 <span>Three.js</span><span>JavaScript</span><span>Physics</span>
               </div>
               <div className="project-links">
-                <a href="https://diandyw.github.io/BTDTrainingCamp/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-                <a href="https://github.com/chewton2k/BalloonTowerTraining" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://diandyw.github.io/BTDTrainingCamp/" target="_blank" rel="noopener noreferrer">Live Site &rarr;</a>
+                <a href="https://github.com/chewton2k/BalloonTowerTraining" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -118,8 +118,8 @@ const ProjectsPage = () => {
                 <span>React</span><span>Firebase</span><span>Productivity</span>
               </div>
               <div className="project-links">
-                <a href="https://hourtracker-59385.web.app/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-                <a href="https://github.com/chewton2k/hourtracker" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://hourtracker-59385.web.app/" target="_blank" rel="noopener noreferrer">Live Site &rarr;</a>
+                <a href="https://github.com/chewton2k/hourtracker" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ const ProjectsPage = () => {
                 <span>Next.js</span><span>PostgreSQL</span><span>Docker</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/CrowdPlan" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/CrowdPlan" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ const ProjectsPage = () => {
                 <span>IoT</span><span>React</span><span>MongoDB</span>
               </div>
               <div className="project-links">
-                <Link href="/projects/pillpall">Case Study →</Link>
+                <Link href="/projects/pillpall">Case Study &rarr;</Link>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ const ProjectsPage = () => {
                 <span>Python</span><span>Gevent</span><span>Network</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/MiniRedis" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/MiniRedis" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -193,7 +193,7 @@ const ProjectsPage = () => {
                 <span>Python</span><span>Selenium</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/ClubScraper" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/ClubScraper" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ const ProjectsPage = () => {
                 <span>Python</span><span>Scikit-learn</span><span>Pandas</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/PredictingStocks" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/PredictingStocks" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -225,7 +225,7 @@ const ProjectsPage = () => {
                 <span>Python</span><span>Flask</span><span>Crypto</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/blockchain" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/blockchain" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -241,7 +241,7 @@ const ProjectsPage = () => {
                 <span>React Native</span><span>OpenAI</span><span>Node</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/Rise-Wise" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/Rise-Wise" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@ const ProjectsPage = () => {
                 <span>SwiftUI</span><span>Firebase</span><span>Vision</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/chewton2k/Office-Group" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <a href="https://github.com/chewton2k/Office-Group" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
               </div>
             </div>
           </div>

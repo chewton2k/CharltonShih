@@ -171,7 +171,7 @@ const ExperiencePage = () => {
                             onClick={(e) => e.stopPropagation()}
                           >
                             {exp.organization}
-                            <span className="link-arrow">↗</span>
+                            <span className="link-arrow">&rarr;</span>
                           </a>
                         ) : (
                           exp.organization
