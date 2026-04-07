@@ -12,22 +12,20 @@ const AboutPage = () => {
             Hi again! Let me formally introduce myself.
           </h1>
           <p>
-            My name is Charlton Shih and I&apos;m a
-            software developer/ML researcher based in Los Angeles, California!
-            I have a strong interest in applying algorithms
-            and data structures to solve real-world problems,
-            particularly in the fields of machine
-            learning and software development.
+            My name is Charlton Shih and I&apos;m an Computer Science undergraduate student
+            based in Los Angeles, California. I&apos;m especially interested in using
+            algorithms, data structures, and mathematical thinking to tackle meaningful
+            problems in machine learning and software engineering.
           </p>
           <p>
             Currently, I&apos;m in my third-year at{" "}
-            <span className="highlight">UCLA</span> pursuing a B.S. Computer Science.
-            My approach combines exploring the applications of mathematics and computer
-            science to develop algorithms and solve real-world problems! I&apos;m passionate
-            about mathematics, and I&apos;m currently working on optimization problems, reinforcement
-            learning environments, and device development. In my spare time, I challenge myself
-            to be active and dedicate time to learning—whether it&apos;s building new projects,
-            exploring new concepts within math and cs, or my recent interest in dabbling with blockchain and IDE's.
+            <span className="highlight">UCLA</span> pursuing a B.S. in Computer Science.
+            I love research and enjoy working at the intersection of mathematics and
+            computing, especially when it leads to new ideas, stronger systems, or deeper
+            technical understanding. Right now, I&apos;m exploring optimization,reinforcement
+            learning environments, and autonomous robotics. Outside of class and work, I like
+            staying active and spending time on new projects, learning more across math and
+            computer science, and recently exploring CLI tools and IDEs.
           </p>
           <p>
             You can reach out to me via{" "}

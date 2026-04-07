@@ -11,7 +11,9 @@ const experiences = [
     date: "February 2026 - Present",
     location: "Los Angeles, California",
     details: [
-      "Coming Soon...",
+      "Built an interactive, kid-friendly selection sort module that made core algorithm concepts accessible to younger students",
+      "Designed the homepage and core UI for a pirate-themed educational platform that made algorithm learning more engaging and approachable",
+      "Integrated MongoDB-backed authentication and leaderboard features to support user accounts, progress tracking, and gamified participation",
     ],
   },
   {
@@ -73,7 +75,7 @@ const experiences = [
     date: "December 2024 - October 2025",
     location: "Los Angeles, California",
     details: [
-      "Collaborated with a three-person team to design and develop multiplayer DCM cascading bandits under reinforcement learning frameworks, targeting sublinear regret under unique action and reward information asymmetry settings",
+      "Collaborated with a three-person team to design and develop multiplayer DCM cascading bandits under reinforcement learning frameworks, targeting sublinear regret under unique action and reward information asymmetry settings for recommendation domains",
       "Experimented with Thompson Sampling and UCB algorithms to analyze multi-agent, multi-click bandit performance",
       "Conducted large-scale simulations (100,000+ rounds) to validate theoretical bounds, measuring regret growth under varying exploration strategies (mMDSEE, UCB Intervals, Round-Robin Allocation)",
     ],
