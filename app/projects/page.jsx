@@ -33,7 +33,7 @@ const ProjectsPage = () => {
           </div>
 
 
-            <div className="project-card with-image">
+          <div className="project-card with-image">
             <div className="project-media">
                <img src="/embd-IDE.png" alt="embd-IDE" />
                <div className="media-overlay">
@@ -46,10 +46,28 @@ const ProjectsPage = () => {
                 A simple lightweight IDE that has everything you need for everyday programming.
               </p>
               <div className="project-tags">
-                <span>Typescript</span><span>Rust</span><span>Svelte</span><span>Tauri</span>
+                <span>Rust</span><span>GPUI</span><span>Cargo</span>
               </div>
               <div className="project-links">
                 <a href="https://github.com/chewton2k/embd-ide" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card with-image">
+            <div className="project-media">
+              <img src="/leo.png" alt="leo" />
+              <div className="media-overlay">
+                 <a href="https://github.com/chewton2k/leo" target="_blank" rel="noopener noreferrer" className="overlay-link">View App</a>
+              </div>
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">leo</h3>
+              <p className="project-description">
+                A terminal note manager written in Rust for creating, organizing, searching, and exporting notes with directory support. It also records audio, transcribes and structures notes with AI, supports inline <code>@leo</code> questions, and serves notes through a local web UI.
+              </p>
+              <div className="project-tags">
+                <span>Rust</span><span>Axum</span><span>Tokio</span><span>Clap</span><span>Whisper</span><span>OpenRouter</span>
               </div>
             </div>
           </div>
