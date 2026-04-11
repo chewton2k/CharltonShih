@@ -222,7 +222,7 @@ const HomePage = () => {
               {experiences.map((exp, i) => (
                 <div key={i} className="gh-list-row">
                   <div className="gh-list-left">
-                    <img src={exp.logo} alt={exp.org} className="gh-org-logo" />
+                    <img src={exp.logo} alt={exp.org} className="gh-org-logo" width={18} height={18} loading="lazy" />
                     <span className="gh-list-role">{exp.role}</span>
                     <span className="gh-list-sep">·</span>
                     {exp.url ? (
