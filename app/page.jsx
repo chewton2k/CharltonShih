@@ -153,25 +153,39 @@ const HomePage = () => {
               Pinned
             </h2>
             <div className="gh-pinned-grid">
-              {pinnedProjects.map((p) => (
-                <a
-                  key={p.name}
-                  href={p.url || '#'}
-                  target={p.url ? '_blank' : undefined}
-                  rel={p.url ? 'noopener noreferrer' : undefined}
-                  className="gh-repo-card"
-                >
-                  <div className="gh-repo-card-top">
-                    <RepoIcon />
-                    <span className="gh-repo-name">{p.name}</span>
+              {pinnedProjects.map((p) =>
+                p.url ? (
+                  <a
+                    key={p.name}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gh-repo-card"
+                  >
+                    <div className="gh-repo-card-top">
+                      <RepoIcon />
+                      <span className="gh-repo-name">{p.name}</span>
+                    </div>
+                    <p className="gh-repo-desc">{p.desc}</p>
+                    <div className="gh-repo-footer">
+                      <span className="gh-lang-dot" style={{ background: p.langColor }} />
+                      <span className="gh-lang-name">{p.lang}</span>
+                    </div>
+                  </a>
+                ) : (
+                  <div key={p.name} className="gh-repo-card">
+                    <div className="gh-repo-card-top">
+                      <RepoIcon />
+                      <span className="gh-repo-name">{p.name}</span>
+                    </div>
+                    <p className="gh-repo-desc">{p.desc}</p>
+                    <div className="gh-repo-footer">
+                      <span className="gh-lang-dot" style={{ background: p.langColor }} />
+                      <span className="gh-lang-name">{p.lang}</span>
+                    </div>
                   </div>
-                  <p className="gh-repo-desc">{p.desc}</p>
-                  <div className="gh-repo-footer">
-                    <span className="gh-lang-dot" style={{ background: p.langColor }} />
-                    <span className="gh-lang-name">{p.lang}</span>
-                  </div>
-                </a>
-              ))}
+                )
+              )}
             </div>
           </section>
           {/* MORE REPOS — Task 6 */}
