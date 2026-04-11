@@ -271,9 +271,31 @@ const HomePage = () => {
               ))}
             </div>
           </section>
-          {/* ABOUT + FOOTER — Task 9 */}
+          {/* About */}
+          <section className="gh-section">
+            <h2 className="gh-section-header">About</h2>
+            <p className="gh-about-text">
+              CS undergraduate at UCLA, graduating Spring 2027. Interested in algorithms, machine learning,
+              and software engineering — especially where math and computing intersect. Currently exploring
+              RL environments, optimization, and CLI tooling.
+            </p>
+            <div className="gh-hobby-strip">
+              <img src="/kobebeef.jpeg" alt="kobe beef" />
+              <img src="/steak.png" alt="steak" />
+              <img src="/tennis.png" alt="tennis" />
+              <img src="/motor.png" alt="motor" />
+            </div>
+          </section>
         </main>
       </div>
+
+      <footer className="gh-footer">
+        <a href="https://github.com/chewton2k" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span className="gh-footer-sep">·</span>
+        <a href="https://www.linkedin.com/in/charlton-shih/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span className="gh-footer-sep">·</span>
+        <a href="mailto:charltonshih645@g.ucla.edu">Email</a>
+      </footer>
     </div>
   );
 };

@@ -345,3 +345,54 @@
   font-style: italic;
   line-height: 1.4;
 }
+
+/* ============================================================
+   About section
+   ============================================================ */
+.gh-about-text {
+  font-size: 0.9375rem;
+  color: var(--gh-text-muted);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.gh-hobby-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.gh-hobby-strip img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--gh-border);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.gh-footer {
+  border-top: 1px solid var(--gh-border);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.gh-footer a {
+  color: var(--gh-text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.gh-footer a:hover {
+  color: var(--gh-accent);
+}
+
+.gh-footer-sep {
+  color: var(--gh-border);
+}
