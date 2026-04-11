@@ -196,3 +196,49 @@
   color: var(--gh-text-muted);
   font-family: var(--font-mono);
 }
+
+/* ============================================================
+   More repositories list
+   ============================================================ */
+.gh-more-repos {
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gh-more-repo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 1rem;
+  text-decoration: none;
+  color: var(--gh-text);
+  border-bottom: 1px solid var(--gh-border);
+  transition: background 0.15s;
+}
+
+.gh-more-repo-row:last-child {
+  border-bottom: none;
+}
+
+.gh-more-repo-row:hover {
+  background: var(--gh-surface);
+}
+
+.gh-more-repo-left {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.gh-more-repo-name {
+  font-size: 0.875rem;
+  color: var(--gh-accent);
+  font-weight: 500;
+}
+
+.gh-more-repo-lang {
+  font-size: 0.75rem;
+  color: var(--gh-text-muted);
+  font-family: var(--font-mono);
+}

@@ -188,7 +188,28 @@ const HomePage = () => {
               )}
             </div>
           </section>
-          {/* MORE REPOS — Task 6 */}
+          {/* More repositories */}
+          <section className="gh-section">
+            <h2 className="gh-section-header">More repositories</h2>
+            <div className="gh-more-repos">
+              {moreRepos.map((r) => (
+                <a
+                  key={r.name}
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gh-more-repo-row"
+                >
+                  <div className="gh-more-repo-left">
+                    <span className="gh-lang-dot" style={{ background: r.langColor }} />
+                    <span className="gh-more-repo-name">{r.name}</span>
+                    <span className="gh-more-repo-lang">{r.lang}</span>
+                  </div>
+                  <ExternalLinkIcon />
+                </a>
+              ))}
+            </div>
+          </section>
           {/* EXPERIENCE — Task 7 */}
           {/* RESEARCH — Task 8 */}
           {/* ABOUT + FOOTER — Task 9 */}
