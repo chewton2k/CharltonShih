@@ -1,100 +1,16 @@
 :root {
   --font-body: var(--font-inter, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
-
-  /* Backgrounds */
-  --bg-base: #fbfbfd;
-  --bg-surface: #ffffff;
-  --bg-surface-hover: #f5f5f7;
-  --bg-card: #ffffff;
-  --bg-elevated: #f5f5f7;
-  --bg-tag: #f5f5f7;
-  --bg-badge: #f5f5f7;
-  --bg-placeholder: #f5f5f7;
-  --bg-button: #f5f5f7;
-  --bg-navbar: rgba(251, 251, 253, 0.72);
-
-  /* Text */
-  --text-primary: #1d1d1f;
-  --text-heading: #1d1d1f;
-  --text-secondary: #6e6e73;
-  --text-muted: #86868b;
-  --text-faint: #aeaeb2;
-  --text-detail: #6e6e73;
-  --text-card: #1d1d1f;
-  --text-card-desc: #6e6e73;
-  --text-project-title: #1d1d1f;
-  --text-project-desc: #6e6e73;
-  --text-tag: #1d1d1f;
-
-  /* Borders */
-  --border-primary: rgba(0, 0, 0, 0.08);
-  --border-section: rgba(0, 0, 0, 0.06);
-  --border-card: rgba(0, 0, 0, 0.06);
-  --border-light: rgba(0, 0, 0, 0.1);
-
-  /* Accent */
-  --accent: #0071e3;
-  --accent-hover: #0077ed;
-  --accent-purple: #0071e3;
-  --accent-blue: #0071e3;
-
-  /* Misc */
-  --icon-color: #1d1d1f;
-  --burger-color: #1d1d1f;
-  --highlight-color: #1d1d1f;
-  --mobile-menu-bg: rgba(251, 251, 253, 0.92);
-  --card-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
 
   line-height: 1.5;
   font-weight: 400;
-  background: var(--bg-base);
-  color: var(--text-primary);
+  background: #0d1117;
+  color: #e6edf3;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-[data-theme="dark"] {
-  --bg-base: #000000;
-  --bg-surface: #1c1c1e;
-  --bg-surface-hover: #2c2c2e;
-  --bg-card: #1c1c1e;
-  --bg-elevated: #1c1c1e;
-  --bg-tag: #2c2c2e;
-  --bg-badge: #2c2c2e;
-  --bg-placeholder: #1c1c1e;
-  --bg-button: #2c2c2e;
-  --bg-navbar: rgba(0, 0, 0, 0.72);
-
-  --text-primary: #f5f5f7;
-  --text-heading: #f5f5f7;
-  --text-secondary: #86868b;
-  --text-muted: #6e6e73;
-  --text-faint: #48484a;
-  --text-detail: #86868b;
-  --text-card: #f5f5f7;
-  --text-card-desc: #86868b;
-  --text-project-title: #f5f5f7;
-  --text-project-desc: #86868b;
-  --text-tag: #f5f5f7;
-
-  --border-primary: rgba(255, 255, 255, 0.08);
-  --border-section: rgba(255, 255, 255, 0.06);
-  --border-card: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.1);
-
-  --accent: #2997ff;
-  --accent-hover: #2997ff;
-  --accent-purple: #2997ff;
-  --accent-blue: #2997ff;
-
-  --icon-color: #f5f5f7;
-  --burger-color: #f5f5f7;
-  --highlight-color: #f5f5f7;
-  --mobile-menu-bg: rgba(0, 0, 0, 0.92);
-  --card-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
 
 html, body {
@@ -104,20 +20,12 @@ html, body {
   height: 100%;
   font-family: var(--font-body);
   scroll-behavior: smooth;
+  background: #0d1117;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   line-height: 1.1;
-}
-
-/* App layout */
-#__next {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  height: 100%;
-  text-align: center;
 }
 
 .app-content {
@@ -130,8 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
 }
 
-/* Selection */
 ::selection {
-  background: var(--accent);
-  color: #fff;
+  background: #58a6ff;
+  color: #0d1117;
 }
