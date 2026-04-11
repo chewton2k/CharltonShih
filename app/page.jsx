@@ -210,7 +210,34 @@ const HomePage = () => {
               ))}
             </div>
           </section>
-          {/* EXPERIENCE — Task 7 */}
+          {/* Experience */}
+          <section className="gh-section">
+            <h2 className="gh-section-header">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
+                <path d="M6.5.75a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-.75v.75a7.25 7.25 0 014.75 11.58l.99.99a.75.75 0 11-1.06 1.06l-.99-.99A7.25 7.25 0 012 8.25v-.5A7.25 7.25 0 016.5 1V.75zm.75 1.5A5.75 5.75 0 002.5 7.75v.5a5.75 5.75 0 1011.5 0v-.5A5.75 5.75 0 007.25 2.25zM8 5a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5A.75.75 0 018 5z" />
+              </svg>
+              Experience
+            </h2>
+            <div className="gh-list">
+              {experiences.map((exp, i) => (
+                <div key={i} className="gh-list-row">
+                  <div className="gh-list-left">
+                    <img src={exp.logo} alt={exp.org} className="gh-org-logo" />
+                    <span className="gh-list-role">{exp.role}</span>
+                    <span className="gh-list-sep">·</span>
+                    {exp.url ? (
+                      <a href={exp.url} target="_blank" rel="noopener noreferrer" className="gh-list-org-link">
+                        {exp.org}
+                      </a>
+                    ) : (
+                      <span className="gh-list-org-plain">{exp.org}</span>
+                    )}
+                  </div>
+                  <span className="gh-list-date">{exp.date}</span>
+                </div>
+              ))}
+            </div>
+          </section>
           {/* RESEARCH — Task 8 */}
           {/* ABOUT + FOOTER — Task 9 */}
         </main>

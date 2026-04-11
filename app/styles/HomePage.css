@@ -242,3 +242,78 @@
   color: var(--gh-text-muted);
   font-family: var(--font-mono);
 }
+
+/* ============================================================
+   Experience / Research shared list styles
+   ============================================================ */
+.gh-list {
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gh-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--gh-border);
+  gap: 1rem;
+}
+
+.gh-list-row:last-child {
+  border-bottom: none;
+}
+
+.gh-list-left {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.gh-org-logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.gh-list-role {
+  font-size: 0.875rem;
+  color: var(--gh-text);
+  white-space: nowrap;
+}
+
+.gh-list-sep {
+  color: var(--gh-text-muted);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.gh-list-org-link {
+  font-size: 0.875rem;
+  color: var(--gh-accent);
+  text-decoration: none;
+  transition: text-decoration 0.15s;
+}
+
+.gh-list-org-link:hover {
+  text-decoration: underline;
+}
+
+.gh-list-org-plain {
+  font-size: 0.875rem;
+  color: var(--gh-text-muted);
+}
+
+.gh-list-date {
+  font-size: 0.75rem;
+  color: var(--gh-text-muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
