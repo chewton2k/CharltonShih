@@ -280,10 +280,10 @@ const HomePage = () => {
               RL environments, optimization, and CLI tooling.
             </p>
             <div className="gh-hobby-strip">
-              <img src="/kobebeef.jpeg" alt="kobe beef" />
-              <img src="/steak.png" alt="steak" />
-              <img src="/tennis.png" alt="tennis" />
-              <img src="/motor.png" alt="motor" />
+              <img src="/kobebeef.jpeg" alt="kobe beef" width={400} height={400} loading="lazy" />
+              <img src="/steak.png" alt="steak" width={400} height={400} loading="lazy" />
+              <img src="/tennis.png" alt="tennis" width={400} height={400} loading="lazy" />
+              <img src="/motor.png" alt="motor" width={400} height={400} loading="lazy" />
             </div>
           </section>
         </main>
