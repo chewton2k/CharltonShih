@@ -238,7 +238,39 @@ const HomePage = () => {
               ))}
             </div>
           </section>
-          {/* RESEARCH — Task 8 */}
+          {/* Research */}
+          <section className="gh-section">
+            <h2 className="gh-section-header">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
+                <path fillRule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06L10.68 11.74z" />
+              </svg>
+              Research
+            </h2>
+            <div className="gh-list">
+              {research.map((r, i) => (
+                <div key={i} className="gh-list-row gh-list-row--research">
+                  <div className="gh-list-left">
+                    <img src={r.logo} alt={r.org} className="gh-org-logo" width={18} height={18} loading="lazy" />
+                    <div className="gh-research-text">
+                      <div className="gh-research-top">
+                        <span className="gh-list-role">{r.role}</span>
+                        <span className="gh-list-sep">·</span>
+                        {r.url ? (
+                          <a href={r.url} target="_blank" rel="noopener noreferrer" className="gh-list-org-link">
+                            {r.org}
+                          </a>
+                        ) : (
+                          <span className="gh-list-org-plain">{r.org}</span>
+                        )}
+                      </div>
+                      <span className="gh-research-desc">{r.desc}</span>
+                    </div>
+                  </div>
+                  <span className="gh-list-date">{r.date}</span>
+                </div>
+              ))}
+            </div>
+          </section>
           {/* ABOUT + FOOTER — Task 9 */}
         </main>
       </div>

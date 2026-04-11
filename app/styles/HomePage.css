@@ -317,3 +317,31 @@
   white-space: nowrap;
   flex-shrink: 0;
 }
+
+/* ============================================================
+   Research row (with description)
+   ============================================================ */
+.gh-list-row--research .gh-list-left {
+  align-items: flex-start;
+}
+
+.gh-research-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.gh-research-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.gh-research-desc {
+  font-size: 0.75rem;
+  color: var(--gh-text-muted);
+  font-style: italic;
+  line-height: 1.4;
+}
