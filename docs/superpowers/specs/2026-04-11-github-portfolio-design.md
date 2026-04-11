@@ -75,7 +75,7 @@ Header: pin icon + "Pinned" label (GitHub style).
 2. embd-IDE — `#dea584` Rust
 3. leo — `#dea584` Rust
 4. BTD Training Camp — `#f1e05a` JavaScript
-5. PillPal — `#61afef` React (use `#61dafb`)
+5. PillPal — `#61dafb` React
 6. UCLA Design — `#61dafb` React
 
 ---
