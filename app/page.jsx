@@ -142,6 +142,20 @@ const HomePage = () => {
               charltonshih645@g.ucla.edu
             </a>
           </div>
+
+          <hr className="gh-sidebar-divider" />
+
+          <p className="gh-about-text">
+            CS undergraduate at UCLA, graduating Spring 2027. Interested in algorithms, machine learning,
+            and software engineering — especially where math and computing intersect. Currently exploring
+            RL environments, optimization, and CLI tooling.
+          </p>
+          <div className="gh-hobby-strip">
+            <img src="/kobebeef.jpeg" alt="kobe beef" width={400} height={400} loading="lazy" />
+            <img src="/steak.png" alt="steak" width={400} height={400} loading="lazy" />
+            <img src="/tennis.png" alt="tennis" width={400} height={400} loading="lazy" />
+            <img src="/motor.png" alt="motor" width={400} height={400} loading="lazy" />
+          </div>
         </aside>
 
         {/* Main content */}
@@ -269,21 +283,6 @@ const HomePage = () => {
                   <span className="gh-list-date">{r.date}</span>
                 </div>
               ))}
-            </div>
-          </section>
-          {/* About */}
-          <section className="gh-section">
-            <h2 className="gh-section-header">About</h2>
-            <p className="gh-about-text">
-              CS undergraduate at UCLA, graduating Spring 2027. Interested in algorithms, machine learning,
-              and software engineering — especially where math and computing intersect. Currently exploring
-              RL environments, optimization, and CLI tooling.
-            </p>
-            <div className="gh-hobby-strip">
-              <img src="/kobebeef.jpeg" alt="kobe beef" width={400} height={400} loading="lazy" />
-              <img src="/steak.png" alt="steak" width={400} height={400} loading="lazy" />
-              <img src="/tennis.png" alt="tennis" width={400} height={400} loading="lazy" />
-              <img src="/motor.png" alt="motor" width={400} height={400} loading="lazy" />
             </div>
           </section>
         </main>

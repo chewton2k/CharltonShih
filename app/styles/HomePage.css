@@ -347,18 +347,24 @@
 }
 
 /* ============================================================
-   About section
+   Sidebar about / hobby strip
    ============================================================ */
+.gh-sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--gh-border);
+  margin: 1.25rem 0;
+}
+
 .gh-about-text {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--gh-text-muted);
   line-height: 1.6;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
 }
 
 .gh-hobby-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 }
 
@@ -366,7 +372,7 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid var(--gh-border);
 }
 
@@ -464,8 +470,10 @@
     padding-left: calc(18px + 0.625rem);
   }
 
+  .gh-sidebar-divider,
+  .gh-about-text,
   .gh-hobby-strip {
-    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / 3;
   }
 }
 
