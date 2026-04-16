@@ -342,6 +342,26 @@ export default function Portfolio() {
 
       {/* ── Content ── */}
       <main className="p-content">
+        {/* Hero */}
+        <div className="p-hero">
+          <motion.p
+            className="p-hero-greeting"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}
+          >
+            Hi there, I&rsquo;m Charlton.
+          </motion.p>
+          <motion.p
+            className="p-hero-sub"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: 'easeOut', delay: 0.18 }}
+          >
+            Software engineer &amp; researcher at UCLA — I build at the intersection of AI, systems, and the web.
+          </motion.p>
+        </div>
+
         <AnimatePresence mode="wait">
           <motion.div
             key={tab}

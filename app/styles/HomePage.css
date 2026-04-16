@@ -187,6 +187,30 @@
 }
 
 /* ============================================================
+   Hero
+   ============================================================ */
+.p-hero {
+  margin-bottom: 2.75rem;
+}
+
+.p-hero-greeting {
+  font-size: clamp(1.875rem, 4vw, 2.625rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.p-hero-sub {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+/* ============================================================
    Section structure
    ============================================================ */
 .p-section {
@@ -793,6 +817,11 @@ a.p-project-card:hover {
     padding: 0 1.25rem;
   }
 
+  /* Hero */
+  .p-hero {
+    margin-bottom: 2rem;
+  }
+
   /* Projects — single column */
   .p-projects-grid {
     grid-template-columns: 1fr;
@@ -905,6 +934,11 @@ a.p-project-card:hover {
   .p-tabs .p-tab {
     font-size: 0.725rem;
     padding: 0.35rem 0.8rem;
+  }
+
+  /* Hero */
+  .p-hero-greeting {
+    font-size: 1.625rem;
   }
 
   /* Content */
