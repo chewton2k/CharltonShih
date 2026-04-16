@@ -776,7 +776,7 @@ a.p-project-card:hover {
   text-align: center;
   user-select: none;
   pointer-events: auto;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--mono);
   white-space: pre;
   line-height: 1.35;
   font-size: clamp(0.45rem, 1.1vw, 0.7rem);
@@ -786,7 +786,7 @@ a.p-project-card:hover {
   padding: 0 0 0.5rem 0;
 }
 
-[data-theme='light'] .p-ascii-hills {
+.portfolio[data-theme="light"] .p-ascii-hills {
   opacity: 0.22;
 }
 
