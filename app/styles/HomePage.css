@@ -1004,6 +1004,10 @@ a.p-project-card:hover {
     flex-wrap: wrap;
     gap: 0.75rem;
   }
+
+  .p-ascii-hills {
+    font-size: clamp(0.38rem, 0.9vw, 0.55rem);
+  }
 }
 
 /* ============================================================
@@ -1101,5 +1105,10 @@ a.p-project-card:hover {
 
   .p-footer a {
     font-size: 0.75rem;
+  }
+
+  .p-ascii-hills {
+    font-size: 0.38rem;
+    opacity: 0.25;
   }
 }
