@@ -1111,4 +1111,8 @@ a.p-project-card:hover {
     font-size: 0.38rem;
     opacity: 0.25;
   }
+
+  .portfolio[data-theme="light"] .p-ascii-hills {
+    opacity: 0.22;
+  }
 }
