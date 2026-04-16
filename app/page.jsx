@@ -531,7 +531,7 @@ function WorkSection() {
         >
           {gravityOn
             ? <><span className="p-gravity-icon">↺</span> Reset</>
-            : <><span className="p-gravity-icon">⬇</span> Activate Gravity</>
+            : <> Activate Gravity</>
           }
         </button>
       </div>
