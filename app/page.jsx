@@ -433,21 +433,23 @@ function WorkSection() {
               >
                 <div className="p-list-left">
                   <img src={exp.logo} alt="" className="p-org-logo" width={16} height={16} loading="lazy" />
-                  <span className="p-list-role">{exp.role}</span>
-                  <span className="p-list-sep">·</span>
-                  {exp.link ? (
-                    <a
-                      href={exp.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-list-org"
-                      onClick={e => e.stopPropagation()}
-                    >
-                      {exp.organization}
-                    </a>
-                  ) : (
-                    <span className="p-list-org-plain">{exp.organization}</span>
-                  )}
+                  <div className="p-list-text">
+                    <span className="p-list-role">{exp.role}</span>
+                    <span className="p-list-sep">·</span>
+                    {exp.link ? (
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-list-org"
+                        onClick={e => e.stopPropagation()}
+                      >
+                        {exp.organization}
+                      </a>
+                    ) : (
+                      <span className="p-list-org-plain">{exp.organization}</span>
+                    )}
+                  </div>
                 </div>
                 <div className="p-exp-row-right">
                   <span className="p-list-date">{exp.date}</span>
