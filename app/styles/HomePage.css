@@ -767,6 +767,35 @@ a.p-project-card:hover {
 }
 
 /* ============================================================
+   ASCII Hills
+   ============================================================ */
+
+.p-ascii-hills {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  pointer-events: auto;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
+  line-height: 1.35;
+  font-size: clamp(0.45rem, 1.1vw, 0.7rem);
+  color: var(--text-3);
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+  padding: 0 0 0.5rem 0;
+}
+
+[data-theme='light'] .p-ascii-hills {
+  opacity: 0.22;
+}
+
+.p-ascii-hills span {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+/* ============================================================
    Page-load Loader
    ============================================================ */
 .loader-overlay {
