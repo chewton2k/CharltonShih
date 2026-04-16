@@ -719,8 +719,8 @@ function AboutSection() {
         <h2 className="p-section-label">Currently</h2>
         <div className="p-currently">
           <div className="p-currently-item">
-            <span className="p-currently-label">Studying</span>
-            <span className="p-currently-value">BS Computer Science @ UCLA, Spring 2027</span>
+            <span className="p-currently-label">Learning</span>
+            <span className="p-currently-value">Rust and Reinforcement Learning</span>
           </div>
           <div className="p-currently-item">
             <span className="p-currently-label">Building</span>
@@ -732,7 +732,7 @@ function AboutSection() {
           </div>
           <div className="p-currently-item">
             <span className="p-currently-label">Clubs</span>
-            <span className="p-currently-value">Clubhouse, Creative Labs, Association for Computing Machinery (ACM), Biomedical Engineering Society (BMES), Blockchain Club, Theta Tau Professional Engineering Fraternity, Blue Pineapple Protocol, Bruin Club Tennis, Bruin Moto Club</span>
+            <span className="p-currently-value">Theta Tau Professional Engineering Fraternity, Bruin Club Tennis, Bruin Moto Club</span>
           </div>
         </div>
       </section>
