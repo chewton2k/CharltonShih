@@ -1,3 +1,11 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
+/* ============================================================
+   Data
+   ============================================================ */
+
 const pinnedProjects = [
   {
     name: 'Imprint',
@@ -44,24 +52,24 @@ const pinnedProjects = [
 ];
 
 const moreRepos = [
-  { name: 'HourTrack', lang: 'React', langColor: '#61dafb', url: 'https://github.com/chewton2k/hourtracker' },
-  { name: 'CrowdPlan', lang: 'TypeScript', langColor: '#3178c6', url: 'https://github.com/chewton2k/CrowdPlan' },
-  { name: 'MiniRedis', lang: 'Python', langColor: '#3572A5', url: 'https://github.com/chewton2k/MiniRedis' },
-  { name: 'Club Scraper', lang: 'Python', langColor: '#3572A5', url: 'https://github.com/chewton2k/ClubScraper' },
-  { name: 'Stock Prediction', lang: 'Python', langColor: '#3572A5', url: 'https://github.com/chewton2k/PredictingStocks' },
-  { name: 'Simple Blockchain', lang: 'Python', langColor: '#3572A5', url: 'https://github.com/chewton2k/blockchain' },
-  { name: 'RiseAndWise', lang: 'React Native', langColor: '#61dafb', url: 'https://github.com/chewton2k/Rise-Wise' },
-  { name: 'Lotto Group', lang: 'Swift', langColor: '#f05138', url: 'https://github.com/chewton2k/Office-Group' },
+  { name: 'HourTrack',        lang: 'React',        langColor: '#61dafb', url: 'https://github.com/chewton2k/hourtracker' },
+  { name: 'CrowdPlan',        lang: 'TypeScript',   langColor: '#3178c6', url: 'https://github.com/chewton2k/CrowdPlan' },
+  { name: 'MiniRedis',        lang: 'Python',       langColor: '#3572A5', url: 'https://github.com/chewton2k/MiniRedis' },
+  { name: 'Club Scraper',     lang: 'Python',       langColor: '#3572A5', url: 'https://github.com/chewton2k/ClubScraper' },
+  { name: 'Stock Prediction', lang: 'Python',       langColor: '#3572A5', url: 'https://github.com/chewton2k/PredictingStocks' },
+  { name: 'Simple Blockchain',lang: 'Python',       langColor: '#3572A5', url: 'https://github.com/chewton2k/blockchain' },
+  { name: 'RiseAndWise',      lang: 'React Native', langColor: '#61dafb', url: 'https://github.com/chewton2k/Rise-Wise' },
+  { name: 'Lotto Group',      lang: 'Swift',        langColor: '#f05138', url: 'https://github.com/chewton2k/Office-Group' },
 ];
 
 const experiences = [
-  { role: 'Software Engineer', org: 'ACM TeachLA (UCLA)', logo: '/teachLA.png', url: 'https://teachla.uclaacm.com/', date: 'Feb 2026–Present' },
-  { role: 'Software Engineering Intern', org: 'AfterQuery', logo: '/afterquery.png', url: 'https://www.afterquery.com/', date: 'Oct 2025–Present' },
-  { role: 'Software Engineering', org: 'Bruinwalk', logo: '/bruinwalk_logo.png', url: 'https://www.bruinwalk.com/', date: 'Oct 2025–Present' },
-  { role: 'Software Engineer', org: 'Clubhouse @ UCLA', logo: '/clubhouse_ucla.png', url: 'https://www.clubhouseucla.com/', date: 'Mar 2025–Present' },
-  { role: 'Software Engineer', org: 'AdOptimal', logo: '/adoptimal.png', url: null, date: 'Dec 2024–Aug 2025' },
-  { role: 'Learning Assistant (CS 35L)', org: 'UCLA Engineering', logo: '/ucla_engineering.png', url: 'https://web.cs.ucla.edu/classes/spring1f/cs35L/', date: 'Mar 2025–Jun 2025' },
-  { role: 'Learning Assistant (Math 32B)', org: 'UCLA Engineering', logo: '/ucla_engineering.png', url: null, date: 'Jan 2024–Jul 2024' },
+  { role: 'Software Engineer',           org: 'ACM TeachLA (UCLA)',  logo: '/teachLA.png',          url: 'https://teachla.uclaacm.com/',                           date: 'Jan 2026–Apr 2026'    },
+  { role: 'Software Engineer Intern', org: 'AfterQuery',          logo: '/afterquery.png',        url: 'https://www.afterquery.com/',                            date: 'Oct 2025–Apr 2026'    },
+  { role: 'Software Engineering',        org: 'Bruinwalk',           logo: '/bruinwalk_logo.png',    url: 'https://www.bruinwalk.com/',                             date: 'Oct 2025–Present'    },
+  { role: 'Software Engineer',           org: 'Clubhouse @ UCLA',    logo: '/clubhouse_ucla.png',    url: 'https://www.clubhouseucla.com/',                         date: 'Mar 2025–Present'    },
+  { role: 'Software Engineer',           org: 'AdOptimal',           logo: '/adoptimal.png',         url: null,                                                     date: 'Dec 2024–Aug 2025'   },
+  { role: 'Learning Assistant (CS 35L)', org: 'UCLA Engineering',    logo: '/ucla_engineering.png',  url: 'https://web.cs.ucla.edu/classes/spring1f/cs35L/',        date: 'Mar 2025–Jun 2025'   },
+  { role: 'Learning Assistant (Math 32B)',org: 'UCLA Engineering',   logo: '/ucla_engineering.png',  url: null,                                                     date: 'Jan 2024–Jul 2024'   },
 ];
 
 const research = [
@@ -91,212 +99,299 @@ const research = [
   },
 ];
 
-const RepoIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
-    <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z" />
+/* ============================================================
+   Icons
+   ============================================================ */
+
+const SunIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="5" />
+    <line x1="12" y1="1"     x2="12" y2="3" />
+    <line x1="12" y1="21"    x2="12" y2="23" />
+    <line x1="4.22" y1="4.22"   x2="5.64" y2="5.64" />
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+    <line x1="1"  y1="12"    x2="3"  y2="12" />
+    <line x1="21" y1="12"    x2="23" y2="12" />
+    <line x1="4.22" y1="19.78"  x2="5.64" y2="18.36" />
+    <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22" />
   </svg>
 );
 
-const ExternalLinkIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
-    <path d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z" />
+const MoonIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
   </svg>
 );
 
-const PinIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
-    <path fillRule="evenodd" d="M4.456.734a1.75 1.75 0 012.826.504l.613 1.327a3.081 3.081 0 002.084 1.707l2.454.584c1.332.317 1.8 1.972.832 2.94L11.06 9.096l.578 3.808c.208 1.36-1.306 2.35-2.405 1.537l-3.06-2.23-3.06 2.23c-1.099.813-2.613-.177-2.405-1.537l.578-3.808-2.205-2.2c-.968-.968-.5-2.623.832-2.94l2.454-.584A3.081 3.081 0 005.45 2.565l.613-1.327a1.75 1.75 0 01-.607.496z" clipRule="evenodd" />
-  </svg>
-);
+/* ============================================================
+   Root component
+   ============================================================ */
 
-const HomePage = () => {
+export default function Portfolio() {
+  const [theme, setTheme] = useState('dark');
+  const [tab, setTab] = useState('work');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('portfolio-theme');
+    if (saved) {
+      setTheme(saved);
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    localStorage.setItem('portfolio-theme', next);
+  };
+
   return (
-    <div className="gh-page">
-      <div className="gh-layout">
-        {/* Sidebar */}
-        <aside className="gh-sidebar">
-          <img src="/me.jpeg" alt="Charlton Shih" className="gh-avatar" />
-          <h1 className="gh-name">Charlton Shih</h1>
-          <p className="gh-bio">CS @ UCLA · exploring AI/ML and software</p>
-          <div className="gh-meta">
-            <span className="gh-meta-item">Los Angeles, CA</span>
-            <span className="gh-meta-item">Graduating Spring 2027</span>
+    <div className="portfolio" data-theme={theme}>
+      {/* ── Navigation ── */}
+      <header className="p-nav">
+        <div className="p-nav-inner">
+          <a href="/" className="p-name-pill">Charlton Shih</a>
+
+          <nav className="p-tabs" aria-label="Main navigation">
+            <button
+              className={`p-tab${tab === 'work' ? ' p-tab--active' : ''}`}
+              onClick={() => setTab('work')}
+            >
+              Work
+            </button>
+            <button
+              className={`p-tab${tab === 'about' ? ' p-tab--active' : ''}`}
+              onClick={() => setTab('about')}
+            >
+              About
+            </button>
+          </nav>
+
+          <button className="p-theme-toggle" onClick={toggleTheme} aria-label="Toggle color theme">
+            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
+      </header>
+
+      {/* ── Content ── */}
+      <main className="p-content">
+        {tab === 'work' ? (
+          <div className="p-tab-panel" key="work">
+            <WorkSection />
           </div>
-          <div className="gh-sidebar-links">
-            <a href="https://github.com/chewton2k" target="_blank" rel="noopener noreferrer" className="gh-sidebar-link">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              chewton2k
-            </a>
-            <a href="https://www.linkedin.com/in/charlton-shih/" target="_blank" rel="noopener noreferrer" className="gh-sidebar-link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-              charlton-shih
-            </a>
-            <a href="mailto:charltonshih645@g.ucla.edu" className="gh-sidebar-link">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                <path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5C0 2.784.784 2 1.75 2zM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809v6.442zm13-8.181L8 7.88 1.5 4.07v-.32a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v.32z" />
-              </svg>
-              charltonshih645@g.ucla.edu
-            </a>
+        ) : (
+          <div className="p-tab-panel" key="about">
+            <AboutSection />
           </div>
+        )}
+      </main>
 
-          <hr className="gh-sidebar-divider" />
-
-          <p className="gh-about-text">
-            CS undergraduate at UCLA, graduating Spring 2027. Interested in algorithms, machine learning,
-            and software engineering — especially where math and computing intersect. Currently exploring
-            RL environments, optimization, and CLI tooling.
-          </p>
-          <div className="gh-hobby-strip">
-            <img src="/kobebeef.jpeg" alt="kobe beef" width={400} height={400} loading="lazy" />
-            <img src="/steak.png" alt="steak" width={400} height={400} loading="lazy" />
-            <img src="/tennis.png" alt="tennis" width={400} height={400} loading="lazy" />
-            <img src="/motor.png" alt="motor" width={400} height={400} loading="lazy" />
-          </div>
-        </aside>
-
-        {/* Main content */}
-        <main className="gh-main">
-          {/* Pinned */}
-          <section className="gh-section">
-            <h2 className="gh-section-header">
-              <PinIcon />
-              Pinned
-            </h2>
-            <div className="gh-pinned-grid">
-              {pinnedProjects.map((p) =>
-                p.url ? (
-                  <a
-                    key={p.name}
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="gh-repo-card"
-                  >
-                    <div className="gh-repo-card-top">
-                      <RepoIcon />
-                      <span className="gh-repo-name">{p.name}</span>
-                    </div>
-                    <p className="gh-repo-desc">{p.desc}</p>
-                    <div className="gh-repo-footer">
-                      <span className="gh-lang-dot" style={{ background: p.langColor }} />
-                      <span className="gh-lang-name">{p.lang}</span>
-                    </div>
-                  </a>
-                ) : (
-                  <div key={p.name} className="gh-repo-card">
-                    <div className="gh-repo-card-top">
-                      <RepoIcon />
-                      <span className="gh-repo-name">{p.name}</span>
-                    </div>
-                    <p className="gh-repo-desc">{p.desc}</p>
-                    <div className="gh-repo-footer">
-                      <span className="gh-lang-dot" style={{ background: p.langColor }} />
-                      <span className="gh-lang-name">{p.lang}</span>
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
-          </section>
-          {/* More repositories */}
-          <section className="gh-section">
-            <h2 className="gh-section-header">More repositories</h2>
-            <div className="gh-more-repos">
-              {moreRepos.map((r) => (
-                <a
-                  key={r.name}
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="gh-more-repo-row"
-                >
-                  <div className="gh-more-repo-left">
-                    <span className="gh-lang-dot" style={{ background: r.langColor }} />
-                    <span className="gh-more-repo-name">{r.name}</span>
-                    <span className="gh-more-repo-lang">{r.lang}</span>
-                  </div>
-                  <ExternalLinkIcon />
-                </a>
-              ))}
-            </div>
-          </section>
-          {/* Experience */}
-          <section className="gh-section">
-            <h2 className="gh-section-header">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
-                <path d="M6.5.75a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-.75v.75a7.25 7.25 0 014.75 11.58l.99.99a.75.75 0 11-1.06 1.06l-.99-.99A7.25 7.25 0 012 8.25v-.5A7.25 7.25 0 016.5 1V.75zm.75 1.5A5.75 5.75 0 002.5 7.75v.5a5.75 5.75 0 1011.5 0v-.5A5.75 5.75 0 007.25 2.25zM8 5a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5A.75.75 0 018 5z" />
-              </svg>
-              Experience
-            </h2>
-            <div className="gh-list">
-              {experiences.map((exp, i) => (
-                <div key={i} className="gh-list-row">
-                  <div className="gh-list-left">
-                    <img src={exp.logo} alt={exp.org} className="gh-org-logo" width={18} height={18} loading="lazy" />
-                    <span className="gh-list-role">{exp.role}</span>
-                    <span className="gh-list-sep">·</span>
-                    {exp.url ? (
-                      <a href={exp.url} target="_blank" rel="noopener noreferrer" className="gh-list-org-link">
-                        {exp.org}
-                      </a>
-                    ) : (
-                      <span className="gh-list-org-plain">{exp.org}</span>
-                    )}
-                  </div>
-                  <span className="gh-list-date">{exp.date}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-          {/* Research */}
-          <section className="gh-section">
-            <h2 className="gh-section-header">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e" aria-hidden="true">
-                <path fillRule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06L10.68 11.74z" />
-              </svg>
-              Research
-            </h2>
-            <div className="gh-list">
-              {research.map((r, i) => (
-                <div key={i} className="gh-list-row gh-list-row--research">
-                  <div className="gh-list-left">
-                    <img src={r.logo} alt={r.org} className="gh-org-logo" width={18} height={18} loading="lazy" />
-                    <div className="gh-research-text">
-                      <div className="gh-research-top">
-                        <span className="gh-list-role">{r.role}</span>
-                        <span className="gh-list-sep">·</span>
-                        {r.url ? (
-                          <a href={r.url} target="_blank" rel="noopener noreferrer" className="gh-list-org-link">
-                            {r.org}
-                          </a>
-                        ) : (
-                          <span className="gh-list-org-plain">{r.org}</span>
-                        )}
-                      </div>
-                      <span className="gh-research-desc">{r.desc}</span>
-                    </div>
-                  </div>
-                  <span className="gh-list-date">{r.date}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        </main>
-      </div>
-
-      <footer className="gh-footer">
+      {/* ── Footer ── */}
+      <footer className="p-footer">
         <a href="https://github.com/chewton2k" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <span className="gh-footer-sep">·</span>
+        <span className="p-footer-dot" />
         <a href="https://www.linkedin.com/in/charlton-shih/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span className="gh-footer-sep">·</span>
+        <span className="p-footer-dot" />
         <a href="mailto:charltonshih645@g.ucla.edu">Email</a>
+        <span className="p-footer-dot" />
+        <a href="/Charlton_Shih_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </footer>
     </div>
   );
-};
+}
 
-export default HomePage;
+/* ============================================================
+   Work Tab
+   ============================================================ */
+
+function WorkSection() {
+  return (
+    <div>
+      {/* Projects */}
+      <section className="p-section">
+        <h2 className="p-section-label">Projects</h2>
+
+        <div className="p-projects-grid">
+          {pinnedProjects.map((p) =>
+            p.url ? (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-project-card"
+              >
+                <div className="p-project-name">{p.name}</div>
+                <p className="p-project-desc">{p.desc}</p>
+                <div className="p-project-footer">
+                  <span className="p-lang-dot" style={{ background: p.langColor }} />
+                  <span className="p-lang-name">{p.lang}</span>
+                </div>
+              </a>
+            ) : (
+              <div key={p.name} className="p-project-card">
+                <div className="p-project-name">{p.name}</div>
+                <p className="p-project-desc">{p.desc}</p>
+                <div className="p-project-footer">
+                  <span className="p-lang-dot" style={{ background: p.langColor }} />
+                  <span className="p-lang-name">{p.lang}</span>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+
+        <div className="p-repos-list">
+          {moreRepos.map((r) => (
+            <a
+              key={r.name}
+              href={r.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-repo-row"
+            >
+              <div className="p-repo-left">
+                <span className="p-lang-dot" style={{ background: r.langColor }} />
+                <span className="p-repo-name">{r.name}</span>
+                <span className="p-repo-lang">{r.lang}</span>
+              </div>
+              <span className="p-repo-arrow">↗</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="p-section">
+        <h2 className="p-section-label">Experience</h2>
+        <div className="p-list">
+          {experiences.map((exp, i) => (
+            <div key={i} className="p-list-row">
+              <div className="p-list-left">
+                <img src={exp.logo} alt="" className="p-org-logo" width={16} height={16} loading="lazy" />
+                <span className="p-list-role">{exp.role}</span>
+                <span className="p-list-sep">·</span>
+                {exp.url ? (
+                  <a href={exp.url} target="_blank" rel="noopener noreferrer" className="p-list-org">
+                    {exp.org}
+                  </a>
+                ) : (
+                  <span className="p-list-org-plain">{exp.org}</span>
+                )}
+              </div>
+              <span className="p-list-date">{exp.date}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Research */}
+      <section className="p-section">
+        <h2 className="p-section-label">Research</h2>
+        <div className="p-list">
+          {research.map((r, i) => (
+            <div key={i} className="p-list-row p-list-row--expanded">
+              <div className="p-list-left">
+                <img src={r.logo} alt="" className="p-org-logo" width={16} height={16} loading="lazy" />
+                <div>
+                  <div className="p-research-top">
+                    <span className="p-list-role">{r.role}</span>
+                    <span className="p-list-sep">·</span>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="noopener noreferrer" className="p-list-org">
+                        {r.org}
+                      </a>
+                    ) : (
+                      <span className="p-list-org-plain">{r.org}</span>
+                    )}
+                  </div>
+                  <p className="p-research-desc">{r.desc}</p>
+                </div>
+              </div>
+              <span className="p-list-date">{r.date}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+/* ============================================================
+   About Tab
+   ============================================================ */
+
+function AboutSection() {
+  return (
+    <div>
+      {/* Hero */}
+      <div className="p-about-hero">
+        <img src="/me.jpeg" alt="Charlton Shih" className="p-about-photo" loading="lazy" />
+        <div>
+          <h1 className="p-about-name">Charlton Shih</h1>
+          <p className="p-about-tagline">CS @ UCLA &nbsp;·&nbsp; Los Angeles, CA</p>
+          <p className="p-about-bio">
+            I&rsquo;m a Computer Science undergraduate at UCLA, graduating Spring&nbsp;2027.
+            I&rsquo;m drawn to the intersections of math and systems — currently exploring
+            reinforcement learning, CLI tooling, and low-level programming in Rust.
+            Outside of code I&rsquo;m eating too well, playing tennis, or riding motorcycles.
+          </p>
+          <div className="p-about-links">
+            <a href="https://github.com/chewton2k" target="_blank" rel="noopener noreferrer" className="p-about-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/charlton-shih/" target="_blank" rel="noopener noreferrer" className="p-about-link">LinkedIn</a>
+            <a href="mailto:charltonshih645@g.ucla.edu" className="p-about-link">Email</a>
+            <a href="/Charlton_Shih_Resume.pdf" target="_blank" rel="noopener noreferrer" className="p-about-link">Resume</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Currently */}
+      <section className="p-section">
+        <h2 className="p-section-label">Currently</h2>
+        <div className="p-currently">
+          <div className="p-currently-item">
+            <span className="p-currently-label">Studying</span>
+            <span className="p-currently-value">BS Computer Science @ UCLA, Spring 2027</span>
+          </div>
+          <div className="p-currently-item">
+            <span className="p-currently-label">Building</span>
+            <span className="p-currently-value">leo — terminal note manager with AI structuring</span>
+          </div>
+          <div className="p-currently-item">
+            <span className="p-currently-label">Working</span>
+            <span className="p-currently-value">Software Engineering Intern @ AfterQuery</span>
+          </div>
+          <div className="p-currently-item">
+            <span className="p-currently-label">Teaching</span>
+            <span className="p-currently-value">ACM TeachLA @ UCLA</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond code */}
+      <section className="p-section">
+        <h2 className="p-section-label">Beyond code</h2>
+        <div className="p-hobbies">
+          <div className="p-hobby-card">
+            <img src="/kobebeef.jpeg" alt="Food" loading="lazy" />
+            <span className="p-hobby-label">Food</span>
+          </div>
+          <div className="p-hobby-card">
+            <img src="/steak.png" alt="Cooking" loading="lazy" />
+            <span className="p-hobby-label">Cooking</span>
+          </div>
+          <div className="p-hobby-card">
+            <img src="/tennis.png" alt="Tennis" loading="lazy" />
+            <span className="p-hobby-label">Tennis</span>
+          </div>
+          <div className="p-hobby-card">
+            <img src="/motor.png" alt="Motorcycles" loading="lazy" />
+            <span className="p-hobby-label">Motorcycles</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
