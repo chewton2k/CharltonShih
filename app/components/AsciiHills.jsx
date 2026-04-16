@@ -28,8 +28,9 @@ export default function AsciiHills() {
 
     const rows = SCENE.split('\n');
     containerRef.current.innerHTML = '';
+    spansRef.current = [];
 
-    rows.forEach((row, rowIdx) => {
+    rows.forEach((row) => {
       const rowDiv = document.createElement('div');
       const spans = [];
 
@@ -52,15 +53,15 @@ export default function AsciiHills() {
 
   const startWave = () => {
     if (rafRef.current) return;
-    let t = 0;
+    spansRef.current.forEach(span => { span.style.transition = 'none'; });
+    const startTime = performance.now();
 
-    const tick = () => {
-      t += 1;
+    const tick = (timestamp) => {
+      const elapsed = timestamp - startTime;
       spansRef.current.forEach((span) => {
         const col = parseInt(span.dataset.col, 10);
-        const y   = Math.sin(t * SPEED * 60 + col * FREQ) * AMPLITUDE;
+        const y   = Math.sin(elapsed * SPEED + col * FREQ) * AMPLITUDE;
         span.style.transform = `translateY(${y}px)`;
-        span.style.transition = 'none';
       });
       rafRef.current = requestAnimationFrame(tick);
     };
