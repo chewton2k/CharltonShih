@@ -107,6 +107,8 @@
   border-color: var(--text-2);
 }
 
+.p-name-short { display: none; }
+
 /* Tab navigation — segmented control */
 .p-tabs {
   display: flex;
@@ -874,6 +876,9 @@ a.p-project-card:hover {
     font-size: 0.725rem;
     padding: 0.3rem 0.65rem;
   }
+
+  .p-name-full { display: none; }
+  .p-name-short { display: inline; }
 
   .p-tabs .p-tab {
     font-size: 0.725rem;

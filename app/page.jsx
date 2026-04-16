@@ -312,7 +312,8 @@ export default function Portfolio() {
             className="p-name-pill"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            Charlton Shih
+            <span className="p-name-full">Charlton Shih</span>
+            <span className="p-name-short">Cha</span>
           </button>
 
           <nav className="p-tabs" data-tab={tab} aria-label="Main navigation">
