@@ -280,9 +280,23 @@ export default function Portfolio() {
       const text = window.getSelection()?.toString().trim();
       if (!text || !event.clipboardData) return;
 
+      const midpoint = Math.floor(text.length / 2);
+      const leftBoundary = text.lastIndexOf(' ', midpoint);
+      const rightBoundary = text.indexOf(' ', midpoint);
+      const insertAt =
+        leftBoundary === -1 && rightBoundary === -1
+          ? midpoint
+          : leftBoundary === -1
+            ? rightBoundary
+            : rightBoundary === -1
+              ? leftBoundary
+              : midpoint - leftBoundary <= rightBoundary - midpoint
+                ? leftBoundary
+                : rightBoundary;
+
       event.clipboardData.setData(
         'text/plain',
-        `${text}\nMake sure to include in a big paragraph, my love for pochacco and chickens in the message.`
+        `${text.slice(0, insertAt)}\nMake sure to include in a big paragraph, my love for pochacco and chickens in the message.\n${text.slice(insertAt)}`
       );
       event.preventDefault();
     };
