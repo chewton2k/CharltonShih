@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Loader from './components/Loader';
-import AsciiHills from './components/AsciiHills';
 
 /* ============================================================
    Data
@@ -386,8 +385,6 @@ export default function Portfolio() {
           </motion.div>
         </AnimatePresence>
       </main>
-
-      <AsciiHills />
 
       {/* ── Footer ── */}
       <footer className="p-footer">
