@@ -316,25 +316,27 @@ export default function Portfolio() {
             <span className="p-name-short">Cha</span>
           </button>
 
-          <nav className="p-tabs" data-tab={tab} aria-label="Main navigation">
-            <span className="p-tabs-slider" aria-hidden="true" />
-            <button
-              className={`p-tab${tab === 'work' ? ' p-tab--active' : ''}`}
-              onClick={() => setTab('work')}
-            >
-              Work
-            </button>
-            <button
-              className={`p-tab${tab === 'about' ? ' p-tab--active' : ''}`}
-              onClick={() => setTab('about')}
-            >
-              About
-            </button>
-          </nav>
+          <div className="p-nav-right">
+            <nav className="p-tabs" data-tab={tab} aria-label="Main navigation">
+              <span className="p-tabs-slider" aria-hidden="true" />
+              <button
+                className={`p-tab${tab === 'work' ? ' p-tab--active' : ''}`}
+                onClick={() => setTab('work')}
+              >
+                Work
+              </button>
+              <button
+                className={`p-tab${tab === 'about' ? ' p-tab--active' : ''}`}
+                onClick={() => setTab('about')}
+              >
+                About
+              </button>
+            </nav>
 
-          <button className="p-theme-toggle" onClick={toggleTheme} aria-label="Toggle color theme">
-            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-          </button>
+            <button className="p-theme-toggle" onClick={toggleTheme} aria-label="Toggle color theme">
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
         </div>
       </header>
 
