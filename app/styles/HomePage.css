@@ -250,11 +250,10 @@
    Gravity Easter Egg
    ============================================================ */
 .p-gravity-bar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1.75rem;
+  display: none;
 }
 
+/* Dark theme (default) — white text + faint white outline */
 .p-gravity-btn {
   display: inline-flex;
   align-items: center;
@@ -264,18 +263,34 @@
   letter-spacing: 0.03em;
   padding: 0.35rem 0.875rem;
   border-radius: 100px;
-  border: 1px solid var(--border);
-  color: var(--text-3);
+  border: 1px solid rgba(242, 242, 247, 0.25);
+  color: rgba(242, 242, 247, 0.75);
   background: transparent;
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s, background 0.2s, box-shadow 0.2s;
   white-space: nowrap;
+  position: fixed;
+  top: 68px;
+  right: clamp(1rem, 4vw, 2.5rem);
+  z-index: 9999;
 }
 
 .p-gravity-btn:hover {
-  border-color: var(--text-2);
-  color: var(--text);
-  background: var(--bg-hover);
+  border-color: rgba(242, 242, 247, 0.6);
+  color: #f2f2f7;
+  background: rgba(242, 242, 247, 0.07);
+}
+
+/* Light theme — gray text + faint gray outline */
+body:has(.portfolio[data-theme="light"]) .p-gravity-btn {
+  border-color: rgba(100, 100, 110, 0.3);
+  color: rgba(100, 100, 110, 0.8);
+}
+
+body:has(.portfolio[data-theme="light"]) .p-gravity-btn:hover {
+  border-color: rgba(100, 100, 110, 0.6);
+  color: #3c3c43;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .p-gravity-icon {
@@ -289,19 +304,25 @@
 }
 
 .p-gravity-btn--reset {
-  border-color: var(--text-2);
-  color: var(--text);
-  position: fixed;
-  top: 68px;
-  right: clamp(1rem, 4vw, 2.5rem);
-  z-index: 9999;
-  background: var(--bg-raised);
+  border-color: rgba(242, 242, 247, 0.6);
+  color: #f2f2f7;
+  background: rgba(36, 36, 38, 0.9);
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 
 .p-gravity-btn--reset:hover {
-  background: var(--bg-hover);
+  background: rgba(44, 44, 46, 0.95);
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+body:has(.portfolio[data-theme="light"]) .p-gravity-btn--reset {
+  border-color: rgba(100, 100, 110, 0.6);
+  color: #3c3c43;
+  background: rgba(237, 232, 221, 0.95);
+}
+
+body:has(.portfolio[data-theme="light"]) .p-gravity-btn--reset:hover {
+  background: rgba(229, 223, 212, 0.98);
 }
 
 .p-gravity-btn--reset .p-gravity-icon {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Loader from './components/Loader';
 import HillsCanvas from './components/HillsCanvas';
@@ -557,18 +558,19 @@ function WorkSection() {
         </motion.p>
       </div>
 
-      {/* Gravity toggle */}
-      <div className="p-gravity-bar">
+      {/* Gravity toggle — portal so fixed position isn't affected by motion.div transform */}
+      {typeof document !== 'undefined' && createPortal(
         <button
           className={`p-gravity-btn${gravityOn ? ' p-gravity-btn--reset' : ''}`}
           onClick={gravityOn ? deactivateGravity : activateGravity}
         >
           {gravityOn
             ? <><span className="p-gravity-icon">↺</span> Reset</>
-            : <> Activate Gravity</>
+            : <> Gravity</>
           }
-        </button>
-      </div>
+        </button>,
+        document.body
+      )}
 
       {/* Actual content — physics targets live here */}
       <div ref={containerRef}>
