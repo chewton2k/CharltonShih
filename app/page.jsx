@@ -14,7 +14,7 @@ const pinnedProjects = [
     desc: 'Provenance tool for proving authorship without uploading content. Cryptographically signed records tied to your identity.',
     lang: 'TypeScript',
     langColor: '#3178c6',
-    url: 'https://github.com/chewton2k/Imprint',
+    url: 'https://app-daxb5vgc1-charlton-shihs-projects.vercel.app',
   },
   {
     name: 'embd-IDE',
@@ -35,7 +35,7 @@ const pinnedProjects = [
     desc: '3D FPS physics-based aim trainer with procedural waves and shadow mapping.',
     lang: 'JavaScript',
     langColor: '#f1e05a',
-    url: 'https://github.com/chewton2k/BalloonTowerTraining',
+    url: 'https://diandyw.github.io/BTDTrainingCamp/',
   },
   {
     name: 'DCM-Bandits-Multiplayer-Information-Asymmetric-Cascading-Bandits-For-Multiple-Clicks',
