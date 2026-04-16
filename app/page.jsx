@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Loader from './components/Loader';
+import HillsCanvas from './components/HillsCanvas';
 
 /* ============================================================
    Data
@@ -385,6 +386,8 @@ export default function Portfolio() {
           </motion.div>
         </AnimatePresence>
       </main>
+
+      <HillsCanvas theme={theme} />
 
       {/* ── Footer ── */}
       <footer className="p-footer">
