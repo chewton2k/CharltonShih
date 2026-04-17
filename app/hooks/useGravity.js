@@ -13,12 +13,14 @@ export function useGravity() {
   const activateGravity = async () => {
     if (gravityOn) return;
 
+    // Snap to top so all elements are in viewport
     window.scrollTo({ top: 0, behavior: 'instant' });
     await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
     const Matter = await import('matter-js');
     const { Engine, Bodies, Body, World, Mouse, MouseConstraint } = Matter;
 
+    // Query the full page content (hero + work section), excluding nav & gravity controls
     const root = document.querySelector('.p-content') || document.body;
     const elements = Array.from(
       root.querySelectorAll(
@@ -41,8 +43,10 @@ export function useGravity() {
       };
     });
 
+    // Lock scroll
     document.body.style.overflow = 'hidden';
 
+    // Detach elements into fixed position
     physicsItems.forEach(({ el, rect }) => {
       const extra = el.classList.contains('p-list-item')
         ? `border:1px solid var(--border);border-radius:8px;background:var(--bg-raised);`
@@ -55,12 +59,14 @@ export function useGravity() {
       `;
     });
 
+    // Invisible overlay — captures mouse events for drag
     const overlay = document.createElement('div');
     overlay.style.cssText = 'position:fixed;inset:0;z-index:9000;cursor:grab;user-select:none;';
     document.body.appendChild(overlay);
     overlay.addEventListener('mousedown', () => { overlay.style.cursor = 'grabbing'; });
     overlay.addEventListener('mouseup',   () => { overlay.style.cursor = 'grab'; });
 
+    // Physics
     const engine = Engine.create({ gravity: { y: 2 } });
     const world  = engine.world;
     const W = window.innerWidth, H = window.innerHeight;
@@ -77,9 +83,9 @@ export function useGravity() {
 
     World.add(world, [
       ...matterBodies,
-      Bodies.rectangle(W / 2,  H + 25,  W * 2, 50,    { isStatic: true }),
-      Bodies.rectangle(-25,    H / 2,   50,    H * 3, { isStatic: true }),
-      Bodies.rectangle(W + 25, H / 2,   50,    H * 3, { isStatic: true }),
+      Bodies.rectangle(W / 2,  H + 25,  W * 2, 50,    { isStatic: true }), // floor
+      Bodies.rectangle(-25,    H / 2,   50,    H * 3, { isStatic: true }), // left
+      Bodies.rectangle(W + 25, H / 2,   50,    H * 3, { isStatic: true }), // right
     ]);
 
     const mouse = Mouse.create(overlay);
@@ -88,6 +94,7 @@ export function useGravity() {
       constraint: { stiffness: 0.15, render: { visible: false } },
     }));
 
+    // Sync DOM to physics each frame
     let raf;
     let lastTime = performance.now();
     const tick = (now) => {
