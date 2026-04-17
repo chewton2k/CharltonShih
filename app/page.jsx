@@ -33,11 +33,11 @@ const pinnedProjects = [
     url: 'https://github.com/chewton2k/leo',
   },
   {
-    name: 'BTD Training Camp',
-    desc: '3D FPS physics-based aim trainer with procedural waves and shadow mapping.',
+    name: 'ClubhouseUCLA',
+    desc: 'Find and rate clubs at UCLA. 600+ MAU, aggregating 1,400+ clubs and 200+ user reviews',
     lang: 'JavaScript',
     langColor: '#f1e05a',
-    url: 'https://diandyw.github.io/BTDTrainingCamp/',
+    url: 'https://clubhouseucla.com',
   },
   {
     name: 'DCM-Bandits-Multiplayer-Information-Asymmetric-Cascading-Bandits-For-Multiple-Clicks',
@@ -47,11 +47,11 @@ const pinnedProjects = [
     url: 'https://github.com/chewton2k/DCM-Bandits-Multiplayer-Information-Asymmetric-Cascading-Bandits-For-Multiple-Clicks',
   },
   {
-    name: 'UCLA Design',
-    desc: 'Real-time drag-and-drop furniture placement UI with MongoDB-backed state.',
+    name: 'Bruinwalk',
+    desc: 'Rate your professors and find new courses at UCLA. 41,000+ monthly users.',
     lang: 'React',
     langColor: '#61dafb',
-    url: 'https://github.com/chewton2k/UCLADesign',
+    url: 'https://bruinwalk.com',
   },
 ];
 
@@ -555,6 +555,9 @@ function WorkSection() {
           transition={{ duration: 0.55, ease: 'easeOut', delay: 0.18 }}
         >
           Software engineer &amp; researcher at UCLA — I build at the intersection of AI, systems, and the web.
+          <br/>
+          <br/>
+          I'm a prev. SWE/AI Intern @ AfterQuery, prev. research assistant @ BruinML, Arisaka, and Pellegrini/Roychowdhury Lab. I'm always down to chat at <a href="mailto:ctwshih@gmail.com">ctwshih[at]gmail.com</a> !
         </motion.p>
       </div>
 
