@@ -151,10 +151,10 @@ export default function HillsCanvas({ theme }) {
               }
             } else if (isNode) {
               // Joint ring across 4 cells.
-              drawCell(drawCol - 1, gridRow, '-', alpha * 0.7);
+              drawCell(drawCol - 1, gridRow, '"', alpha * 0.7);
               drawCell(drawCol,     gridRow, '=', alpha);
               drawCell(drawCol + 1, gridRow, '=', alpha);
-              drawCell(drawCol + 2, gridRow, '-', alpha * 0.7);
+              drawCell(drawCol + 2, gridRow, '"', alpha * 0.7);
             } else if (isLeafRow && leafy) {
               drawCell(drawCol,     gridRow, culm, alpha);
               drawCell(drawCol + 1, gridRow, culm, alpha);
