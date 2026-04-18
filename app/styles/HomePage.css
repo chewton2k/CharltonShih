@@ -801,13 +801,14 @@ a.p-project-card:hover {
   font-size: clamp(0.6rem, 0.85vw, 0.9rem);
   line-height: 1.25;
   white-space: pre;
-  color: var(--text-3);
+  color: #a2ab9b;
   opacity: 0.55;
   margin: 0;
   padding: 0;
 }
 
 [data-theme='light'] .p-hills-canvas {
+  color: #6e6f67;
   opacity: 0.35;
 }
 
