@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Loader from './components/Loader';
-import HillsCanvas from './components/HillsCanvas';
+import BambooFrames from './components/BambooFrames';
 import WorkSection from './components/WorkSection';
 import AboutSection from './components/AboutSection';
 import { SunIcon, MoonIcon } from './components/icons';
@@ -123,7 +123,7 @@ export default function Portfolio() {
         </AnimatePresence>
       </main>
 
-      <HillsCanvas theme={theme} />
+      <BambooFrames theme={theme} />
 
       <footer className="p-footer">
         <a href="https://github.com/chewton2k" target="_blank" rel="noopener noreferrer">GitHub</a>
