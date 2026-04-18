@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen:bamboo": "node scripts/generate-bamboo-frames.js"
+    "gen:bamboo": "node scripts/generate-bamboo-frames.js",
+    "gen:temple": "node scripts/generate-temple-frames.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
