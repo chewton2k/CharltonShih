@@ -3,9 +3,9 @@
 import { useEffect, useRef } from 'react';
 import { frames } from '../data/bambooFrames';
 
-const INTERVAL  = 1000 / 16; // 16fps — subtle sway, lighter on CPU
-const MAX_IDX   = frames.length - 1;
-const CYCLE_LEN = MAX_IDX * 2; // ping-pong: seamless at both ends
+const INTERVAL    = 1000 / 30;
+const MAX_IDX     = frames.length - 1;
+const CYCLE_LEN   = MAX_IDX * 2; // ping-pong: 0→89→0, seamless at both ends
 
 export default function BambooFrames({ theme }) {
   const preRef    = useRef(null);
@@ -43,8 +43,11 @@ export default function BambooFrames({ theme }) {
   }, []);
 
   return (
-    <div className="p-hills-wrapper" data-theme={theme} aria-hidden="true">
-      <pre ref={preRef} className="p-hills-canvas" />
-    </div>
+    <pre
+      ref={preRef}
+      className="p-hills-canvas"
+      data-theme={theme}
+      aria-hidden="true"
+    />
   );
 }
