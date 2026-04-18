@@ -9,8 +9,8 @@ export const experiences = [
   },
   {
     role: 'Lead AI Engineer',
-    organization: 'TappedIn Creative Labs',
-    logo: null,
+    organization: 'TappedIn (Creative Labs)',
+    logo: '/CL.png',
     link: null,
     date: 'April 2026–Present',
     details: ['Coming soon...'],
