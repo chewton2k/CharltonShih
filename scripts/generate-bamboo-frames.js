@@ -59,7 +59,7 @@ function renderFrame(t, stalks, leafParticles, frame) {
 
   for (const s of stalks) {
     const { col, height, speed, phase, nodeEvery, leafDir, maxBend, leafyMask, front } = s;
-    const bend = Math.sin(t * speed + phase);   // no gusts — deterministic, loops cleanly
+    const bend = Math.sin(t * speed + phase);   // no gusts — deterministic (loop boundary may have a small snap)
 
     let prevCol = col;
     for (let r = 0; r < height; r++) {
@@ -151,5 +151,6 @@ export const frames = ${JSON.stringify(frames, null, 2)};
 `;
 
 const outPath = path.join(__dirname, '..', 'app', 'data', 'bambooFrames.js');
+fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, output, 'utf8');
 console.log(`✓ Generated ${frames.length} frames → ${outPath} (${(output.length / 1024).toFixed(1)} KB)`);
