@@ -133,6 +133,8 @@ export default function Portfolio() {
         <a href="mailto:charltonshih645@g.ucla.edu">Email</a>
         <span className="p-footer-dot" />
         <a href="/Charlton_Shih_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <span className="p-footer-dot" />
+        <a href="https://huggingface.co/chewton2k" target="_blank" rel="noopener noreferrer">Hugging Face</a>
       </footer>
     </div>
   );
