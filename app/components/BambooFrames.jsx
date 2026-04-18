@@ -3,12 +3,14 @@
 import { useEffect, useRef } from 'react';
 import { frames } from '../data/bambooFrames';
 
-const INTERVAL = 1000 / 30;
+const INTERVAL    = 1000 / 30;
+const MAX_IDX     = frames.length - 1;
+const CYCLE_LEN   = MAX_IDX * 2; // ping-pong: 0→89→0, seamless at both ends
 
 export default function BambooFrames({ theme }) {
   const preRef    = useRef(null);
   const rafRef    = useRef(null);
-  const indexRef  = useRef(0);
+  const posRef    = useRef(0);   // position in [0, CYCLE_LEN)
   const lastTsRef = useRef(null);
 
   useEffect(() => {
@@ -18,9 +20,12 @@ export default function BambooFrames({ theme }) {
 
       if (elapsed >= INTERVAL) {
         lastTsRef.current = ts - (elapsed % INTERVAL);
-        indexRef.current  = (indexRef.current + 1) % frames.length;
+        posRef.current = (posRef.current + 1) % CYCLE_LEN;
+        const frameIdx = posRef.current <= MAX_IDX
+          ? posRef.current
+          : CYCLE_LEN - posRef.current;
         if (preRef.current) {
-          preRef.current.textContent = frames[indexRef.current];
+          preRef.current.textContent = frames[frameIdx];
         }
       }
 
