@@ -4,7 +4,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const COLS         = 120;
+const COLS         = 200;
 const ROWS         = 15;
 const TOTAL_FRAMES = 90;
 const DT           = 1 / 30;
