@@ -24,7 +24,7 @@ export function useGravity() {
     const root = document.querySelector('.p-content') || document.body;
     const elements = Array.from(
       root.querySelectorAll(
-        '.p-hero-greeting, .p-hero-sub, .p-section-label, .p-project-card, .p-view-repos-btn, .p-list-item'
+        '.p-hero-greeting, .p-hero-sub, .p-section-label, .p-project-card, .p-view-repos-btn, .p-list-item, .p-hero-side-image'
       )
     ).filter(el => {
       const r = el.getBoundingClientRect();
