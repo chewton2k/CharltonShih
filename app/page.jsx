@@ -79,7 +79,7 @@ export default function Portfolio() {
         <div className="p-nav-inner">
           <button
             className="p-name-pill"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => setTab('work')}
           >
             <span className="p-name-full">Charlton Shih</span>
             <span className="p-name-short">Cha</span>

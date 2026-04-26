@@ -67,7 +67,7 @@ export default function WorkSection() {
           </a>
         </section>
 
-        <section className="p-section">
+        {/* <section className="p-section">
           <h2 className="p-section-label">Experience</h2>
           <div className="p-list">
             {experiences.map((exp, i) => (
@@ -79,7 +79,7 @@ export default function WorkSection() {
               />
             ))}
           </div>
-        </section>
+        </section>*/}
       </div>
     </div>
   );
