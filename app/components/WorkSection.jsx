@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { pinnedProjects } from '../data/projects';
-import { experiences } from '../data/experiences';
-import { useGravity } from '../hooks/useGravity';
-import ProjectCard from './ProjectCard';
-import ExperienceItem from './ExperienceItem';
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { pinnedProjects } from "../data/projects";
+import { experiences } from "../data/experiences";
+import { useGravity } from "../hooks/useGravity";
+import ProjectCard from "./ProjectCard";
+import ExperienceItem from "./ExperienceItem";
 
 export default function WorkSection() {
   const [openExp, setOpenExp] = useState(null);
@@ -16,37 +16,62 @@ export default function WorkSection() {
   return (
     <div>
       <div className="p-hero">
-        <motion.p
-          className="p-hero-greeting"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}
-        >
-          Hi there, I&rsquo;m Charlton.
-        </motion.p>
-        <motion.p
-          className="p-hero-sub"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: 'easeOut', delay: 0.18 }}
-        >
-          Software engineer &amp; researcher at UCLA — I build at the intersection of AI, systems, and the web.
-          <br/>
-          <br/>
-          I'm a prev. SWE/AI Intern @ AfterQuery, prev. research assistant @ BruinML, Arisaka, and Pellegrini/Roychowdhury Lab. I'm always down to chat at <a href="mailto:ctwshih@gmail.com">ctwshih[at]gmail.com</a> !
-        </motion.p>
+        <div className="p-hero-copy">
+          <motion.p
+            className="p-hero-greeting"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: "easeOut", delay: 0.05 }}
+          >
+            Hi there, I&rsquo;m Charlton.
+          </motion.p>
+          <motion.p
+            className="p-hero-sub"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: "easeOut", delay: 0.18 }}
+          >
+            Software engineer &amp; researcher at UCLA — I build at the
+            intersection of AI, systems, and the web.
+            <br />
+            <br />
+            I'm a prev. SWE/AI Intern @ AfterQuery, prev. research assistant @
+            BruinML, Arisaka, and Pellegrini/Roychowdhury Lab. I'm always down
+            to chat at{" "}
+            <a href="mailto:ctwshih@gmail.com">ctwshih[at]gmail.com</a> !
+          </motion.p>
+        </div>
+
+        <motion.img
+          src="/shih.png"
+          alt="Shih calligraphy artwork"
+          className="p-hero-side-image"
+          loading="lazy"
+          initial={{ opacity: 0, x: 22 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.12 }}
+        />
       </div>
 
       <div ref={containerRef}>
-        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '0.5rem' }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            marginBottom: "0.5rem",
+          }}
+        >
           <button
-            className={`p-gravity-btn${gravityOn ? ' p-gravity-btn--reset' : ''}`}
+            className={`p-gravity-btn${gravityOn ? " p-gravity-btn--reset" : ""}`}
             onClick={gravityOn ? deactivateGravity : activateGravity}
           >
-            {gravityOn
-              ? <><span className="p-gravity-icon">↺</span> Reset</>
-              : <> Gravity</>
-            }
+            {gravityOn ? (
+              <>
+                <span className="p-gravity-icon">↺</span> Reset
+              </>
+            ) : (
+              <> Gravity</>
+            )}
           </button>
         </div>
 

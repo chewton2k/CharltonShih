@@ -5,40 +5,50 @@
 
 /* ── Design Tokens (dark default) ── */
 .portfolio {
-  --bg:          #1c1c1e;
-  --bg-raised:   #242426;
-  --bg-hover:    #2c2c2e;
-  --border:      #38383a;
-  --text:        #f2f2f7;
-  --text-2:      #aeaeb2;
-  --text-3:      #636366;
-  --text-inv:    #1c1c1e;
-  --nav-bg:      rgba(28, 28, 30, 0.55);
-  --mono:        ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace;
+  --bg: #1c1c1e;
+  --bg-raised: #242426;
+  --bg-hover: #2c2c2e;
+  --border: #38383a;
+  --text: #f2f2f7;
+  --text-2: #aeaeb2;
+  --text-3: #636366;
+  --text-inv: #1c1c1e;
+  --nav-bg: rgba(28, 28, 30, 0.55);
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 
-  font-family: var(--font-outfit, 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-family: var(
+    --font-outfit,
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif
+  );
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 .portfolio[data-theme="light"] {
-  --bg:          #f5efe6;
-  --bg-raised:   #ede8dd;
-  --bg-hover:    #e5dfd4;
-  --border:      #d0cabf;
-  --text:        #1c1c1e;
-  --text-2:      #6c6c70;
-  --text-3:      #aeaeb2;
-  --text-inv:    #f2f2f7;
-  --nav-bg:      rgba(245, 239, 230, 0.82);
+  --bg: #f5efe6;
+  --bg-raised: #ede8dd;
+  --bg-hover: #e5dfd4;
+  --border: #d0cabf;
+  --text: #1c1c1e;
+  --text-2: #6c6c70;
+  --text-3: #aeaeb2;
+  --text-inv: #f2f2f7;
+  --nav-bg: rgba(245, 239, 230, 0.82);
 }
 
 /* ── Scoped Reset ── */
-.portfolio *, .portfolio *::before, .portfolio *::after {
+.portfolio *,
+.portfolio *::before,
+.portfolio *::after {
   box-sizing: border-box;
 }
 .portfolio button {
@@ -54,8 +64,14 @@
 .portfolio img {
   display: block;
 }
-.portfolio p { margin: 0; }
-.portfolio h1, .portfolio h2, .portfolio h3 { margin: 0; }
+.portfolio p {
+  margin: 0;
+}
+.portfolio h1,
+.portfolio h2,
+.portfolio h3 {
+  margin: 0;
+}
 
 /* ============================================================
    Navigation
@@ -94,7 +110,9 @@
   border-radius: 100px;
   padding: 0.35rem 0.875rem;
   white-space: nowrap;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
   flex-shrink: 0;
 }
 
@@ -102,7 +120,9 @@
   border-color: var(--text-2);
 }
 
-.p-name-short { display: none; }
+.p-name-short {
+  display: none;
+}
 
 /* Tab navigation — segmented control */
 .p-tabs {
@@ -125,8 +145,9 @@
   border-radius: 100px;
   background: var(--text);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              background 0.3s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease;
   pointer-events: none;
 }
 
@@ -165,7 +186,9 @@
   justify-content: center;
   color: var(--text-2);
   flex-shrink: 0;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .p-theme-toggle:hover {
@@ -190,6 +213,10 @@
    Hero
    ============================================================ */
 .p-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
   margin-bottom: 2.75rem;
 }
 
@@ -208,6 +235,18 @@
   color: var(--text-2);
   line-height: 1.75;
   max-width: 480px;
+  margin: 0;
+}
+
+.p-hero-side-image {
+  width: 75%;
+  max-width: 360px;
+  height: auto;
+  justify-self: end;
+  align-self: center;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.22));
+  pointer-events: none;
+  user-select: none;
 }
 
 /* ============================================================
@@ -267,7 +306,11 @@
   color: rgba(242, 242, 247, 0.75);
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
   white-space: nowrap;
   position: relative;
   z-index: 9999;
@@ -305,12 +348,12 @@ body:has(.portfolio[data-theme="light"]) .p-gravity-btn:hover {
   border-color: rgba(242, 242, 247, 0.6);
   color: #f2f2f7;
   background: rgba(36, 36, 38, 0.9);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .p-gravity-btn--reset:hover {
   background: rgba(44, 44, 46, 0.95);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 body:has(.portfolio[data-theme="light"]) .p-gravity-btn--reset {
@@ -469,7 +512,10 @@ a.p-project-card:hover {
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--text-2);
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    background 0.15s;
 }
 
 .p-view-repos-btn:hover {
@@ -797,7 +843,7 @@ a.p-project-card:hover {
   overflow-y: visible;
   pointer-events: none;
   user-select: none;
-  font-family: ui-monospace, 'SF Mono', Menlo, 'Courier New', monospace;
+  font-family: ui-monospace, "SF Mono", Menlo, "Courier New", monospace;
   font-size: clamp(0.6rem, 0.85vw, 0.9rem);
   line-height: 1.25;
   white-space: pre;
@@ -807,7 +853,7 @@ a.p-project-card:hover {
   padding: 0;
 }
 
-[data-theme='light'] .p-hills-canvas {
+[data-theme="light"] .p-hills-canvas {
   color: #6e6f67;
   opacity: 0.35;
 }
@@ -932,7 +978,14 @@ a.p-project-card:hover {
 
   /* Hero */
   .p-hero {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     margin-bottom: 2rem;
+  }
+
+  .p-hero-side-image {
+    max-width: min(72vw, 360px);
+    justify-self: center;
   }
 
   /* Projects — single column */
@@ -1041,8 +1094,12 @@ a.p-project-card:hover {
     padding: 0.3rem 0.65rem;
   }
 
-  .p-name-full { display: none; }
-  .p-name-short { display: inline; }
+  .p-name-full {
+    display: none;
+  }
+  .p-name-short {
+    display: inline;
+  }
 
   .p-tabs .p-tab {
     font-size: 0.725rem;
@@ -1052,6 +1109,10 @@ a.p-project-card:hover {
   /* Hero */
   .p-hero-greeting {
     font-size: 1.625rem;
+  }
+
+  .p-hero-side-image {
+    max-width: min(82vw, 320px);
   }
 
   /* Content */
