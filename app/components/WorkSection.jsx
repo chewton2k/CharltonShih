@@ -42,15 +42,22 @@ export default function WorkSection() {
           </motion.p>
         </div>
 
-        <motion.img
-          src="/shih.png"
-          alt="Shih calligraphy artwork"
-          className="p-hero-side-image"
-          loading="lazy"
+        <motion.div
+          className="p-hero-side-image-wrap"
           initial={{ opacity: 0, x: 22 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.12 }}
-        />
+        >
+          <img
+            src="/shih.png"
+            alt="Shih calligraphy artwork"
+            className="p-hero-side-image"
+            loading="lazy"
+          />
+          <span className="p-hero-side-caption">
+            shih! my last name in chinese
+          </span>
+        </motion.div>
       </div>
 
       <div ref={containerRef}>
