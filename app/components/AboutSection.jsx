@@ -48,7 +48,7 @@ export default function AboutSection() {
           </div>
           <div className="p-currently-item">
             <span className="p-currently-label">Clubs</span>
-            <span className="p-currently-value">Theta Tau Professional Engineering Fraternity, Bruin Club Tennis, Bruin Moto Club</span>
+            <span className="p-currently-value">Theta Tau Professional Engineering Fraternity, Bruin Club Tennis, Bruin Moto Club, Creative Labs, ACM, Student Media</span>
           </div>
         </div>
       </section>
